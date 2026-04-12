@@ -1,10 +1,119 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="uft-8">
-    <title>Hola Mundo</title>
-  </head>
-  <body>
-    <h1>Mi primera página en HTML</h1>
-  </body>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <nav class="mega-menu">
+        <div class="logo">
+        <img src="archivos/img/logoJujuy.jpg" alt="Logo Jujuy" class="logo">
+      <h1>Jujuy Viajes</h1>
+        </div>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li class="has-submenu">
+          <a href="#">Destinos</a>
+          <div class="submenu">
+            <a href="paginas/destinos.html">Destinos</a>
+            <a href="paginas/blogDestinos.html">Blog</a>
+          </div>
+        </li>
+        <li><a href="paginas/agencias.html">Agencias</a></li>
+        <li><a href="paginas/precios.html">Precios</a></li>
+        <li><a href="paginas/contacto.html">Contacto</a></li>
+        <button id="modo-toggle" aria-label="Alternar Modo Oscuro 🌙">🌙</button>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="video-bg">
+        <iframe 
+          src="https://www.youtube.com/embed/aqOC_pKYUv8?autoplay=1&mute=1&loop=1&playlist=aqOC_pKYUv8&controls=0&disablekb=1&fs=0&modestbranding=1&rel=0"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen>
+        </iframe>
+      </div>
+    <div class="overlay">
+        <div class="overlay-texto">
+            <h2>¡Unete!</h2>
+            <p>Para la mejor experiencia de tu vida</p>
+          </div>
+    </div>
+  </section>
+
+  <!-- DESTACADAS -->
+  <section class="clases-destacadas">
+    <h2>Destinos Destacados</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="archivos/img/home/puna.jpg" alt="puna">
+        <h3>Puna</h3>
+      </div>
+      <div class="card">
+        <img src="archivos/img/home/quebrada.jpg" alt="quebrada">
+        <h3>Quebrada</h3>
+      </div>
+      <div class="card">
+        <img src="archivos/img/home/valles.jpg" alt="valles">
+        <h3>Valles</h3>
+      </div>
+      <div class="card">
+        <img src="archivos/img/home/yungas.jpg" alt="yungas">
+        <h3>Yungas</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTADOR ANIMADO -->
+  <section class="contador">
+    <h2 class="section-title">Más de <span class="counter" data-target="500">0</span> visitantes satisfechos</h2>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section class="testimonios">
+    <h2>Comentarios</h2>
+    <div class="carrusel-slider">
+        <div class="testimonio">"Muy calida bienvenida de los jujeños" - <strong>Rocio F.</strong></div>
+        <div class="testimonio">"Excelente la calidad del servicio de transporte" - <strong>Juan C.</strong></div>
+        <div class="testimonio">"Los paisajes son realmente maravillosos" - <strong>Leonel M.</strong></div>
+        <div class="testimonio">"Me gusto mucho la experiencia" - <strong>Angel D.</strong></div>
+        <div class="testimonio">"Dicen que a Jujuy siempre se vuelve" - <strong>Agustina S.</strong></div>
+    </div>
+  </section>
+
+  <script src="js/main.js"></script>
+  
+  <!-- FOOTER -->
+  <footer>
+    <div class="newsletter">
+      <h3>Suscribite al newsletter</h3>
+      <form  >
+        <input type="email" placeholder="Tu correo electrónico" required>
+        <button type="submit" class="button">Suscribirse</button>
+      </form>
+      <div class="redes">
+        <a href="https://www.facebook.com/"><img src="archivos/icons/Facebook.svg" alt="Facebook"></a>
+        <a href="https://www.instagram.com/"><img src="archivos/icons/Instagram.svg" alt="Instagram"></a>
+        <a href="https://www.tiktok.com/"><img src="archivos/icons/tiktok.png" alt="Tiktok"></a>
+      </div>
+    </div>
+    <div class="mapa">
+        <iframe 
+        src="https://www.google.com.ar/maps/d/u/0/embed?mid=1WbCeuLtPgaIoTMBbMBepUsitzrJnUsHE"  
+        loading="lazy">
+        </iframe>
+    </div>
+  </footer>
+
+</body>
 </html>
