@@ -1,0 +1,67 @@
+.agencia-card {
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+    margin: 20px;
+}
+
+.agencia-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+.agencia-card:hover .agencia-card-inner {
+    transform: rotateY(180deg);
+}
+
+.agencia-card-front, .agencia-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.agencia-card-front {
+    background-color: #ffffff;
+}
+
+.agencia-card-back {
+    background-color: #2c3e50;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.rating {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 5px;
+    margin: 15px 0;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 30px;
+    color: #bdc3c7;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.rating label:hover, 
+.rating label:hover ~ label,
+.rating input:checked ~ label {
+    color: #f1c40f;
+}
