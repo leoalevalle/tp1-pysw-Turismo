@@ -54,20 +54,26 @@ body {
     cursor: pointer;
 }
 
-.agencia-toggle {
-    display: none;
-}
-
-.agencia-toggle:checked + .agencia-card-inner {
+.agencia-card:hover .agencia-card-inner {
     transform: rotateY(180deg);
 }
 
-.agencia-card-trigger {
-    position: absolute;
-    inset: 0;
-    z-index: 2;
+.btn-contacto {
     cursor: pointer;
-    background: transparent;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-contacto:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.btn-contacto:active {
+    transform: translateY(1px);
+}
+
+.rating label:active {
+    transform: scale(1.15);
 }
 
 .agencia-card-front, .agencia-card-back {
