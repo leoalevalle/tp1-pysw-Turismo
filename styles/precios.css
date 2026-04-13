@@ -11,7 +11,6 @@
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    background-color: #fff;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     border-radius: 8px;
     overflow: hidden; /* Para que los bordes redondeados funcionen */
@@ -31,9 +30,13 @@
 
 /* EFECTO DE RESALTADO AL PASAR EL CURSOR */
 .tabla-precios tbody tr:hover {
-    background-color: #fdf2e9; /* Un tono naranja muy suave */
+    background-color: #ffc08c; /* Un tono naranja muy suave */
     transform: scale(1.01);
     transition: all 0.2s ease-in-out;
+}
+
+.dark-mode .tabla-precios tbody tr:hover {
+  background-color: #cd5911; /* naranja más oscuro */
 }
 
 /* ESTILOS DEL TOOLTIP (SIN JS) */

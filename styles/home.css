@@ -17,17 +17,59 @@
   pointer-events: none;
 }
 
-.hero .overlay {
+.overlay {
   position: absolute;
-  top: 0; left: 0;
-  color: white;
-  width: 100%; height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  color: white;
+}
+
+/* Animación del Texto */
+.overlay-texto h2 {
+  font-size: 4rem;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  animation: slideDown 1.2s ease-out forwards;
+  opacity: 0;
+}
+
+.overlay-texto p {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  animation: fadeIn 2s ease-in forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+
+/* Keyframes de las Animaciones */
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .overlay-texto h2 { font-size: 2.5rem; }
+  .overlay-texto p { font-size: 1.1rem; }
 }
 
 /* DESTINOS (CARDS) */
@@ -58,6 +100,20 @@
 .card img { width: 100%; height: 180px; object-fit: cover; }
 
 /* CONTADOR ANIMADO */
+
+.counter::after {
+  content: "0";
+  animation: contar 3s forwards ease-in-out;
+}
+
+@keyframes contar {
+  0% { content: "100"; }
+  25% { content: "200"; }
+  50% { content: "300"; }
+  75% { content: "400"; }
+  100% { content: "500"; }
+}
+
 .contador {
   background-color: var(--card-bg);
   padding: 2rem 0;
@@ -71,11 +127,6 @@
 }
 
 /* TESTIMONIOS (SLIDER) */
-.testimonios {
-  text-align: center;
-  padding: 2rem 1rem;
-}
-
 .carrusel-slider {
   position: relative;
   width: 100%;
@@ -86,22 +137,26 @@
 }
 
 .testimonio {
-  background-color: var(--card-bg);
-  color: var(--text-color);
   position: absolute;
   width: 100%;
   opacity: 0;
   padding: 1.5rem;
   border-radius: 10px;
-  animation: fadeSlide 12s infinite;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  animation: slideFade 25s infinite;
 }
 
-@keyframes fadeSlide {
-  0% { opacity: 0; transform: translateX(30px); }
-  10%, 30% { opacity: 1; transform: translateX(0); }
-  40%, 100% { opacity: 0; transform: translateX(-30px); }
+@keyframes slideFade {
+  0%   { opacity: 0; transform: translateX(-100%); }
+  5%   { opacity: 1; transform: translateX(0); }
+  20%  { opacity: 1; transform: translateX(0); }
+  25%  { opacity: 0; transform: translateX(100%); }
+  100% { opacity: 0; transform: translateX(100%); }
 }
 
-.testimonio:nth-child(2) { animation-delay: 4s; }
-.testimonio:nth-child(3) { animation-delay: 8s; }
+/* Escalonar cada testimonio */
+.testimonio:nth-child(1) { animation-delay: 0s; }
+.testimonio:nth-child(2) { animation-delay: 5s; }
+.testimonio:nth-child(3) { animation-delay: 10s; }
+.testimonio:nth-child(4) { animation-delay: 15s; }
+.testimonio:nth-child(5) { animation-delay: 20s; }
