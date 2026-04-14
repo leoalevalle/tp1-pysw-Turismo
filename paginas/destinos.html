@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Destinos</title>
+
+<link rel="stylesheet" href="../styles/main.css">
+<link rel="stylesheet" href="../styles/destinos.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <nav class="mega-menu">
+    <div class="logo">
+      <img src="../archivos/img/logoJujuy.jpg" class="logo">
+      <h1>Jujuy Viajes</h1>
+    </div>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li class="has-submenu">
+        <a href="#">Destinos</a>
+        <div class="submenu">
+          <a href="destinos.html">Destinos</a>
+          <a href="blogDestinos.html">Blog</a>
+        </div>
+      </li>
+      <li><a href="agencias.html">Agencias</a></li>
+      <li><a href="precios.html">Precios</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <button id="modo-toggle">🌙</button>
+    </ul>
+  </nav>
+</header>
+
+<!-- MAIN -->
+<main class="contenedor-destinos">
+
+<h2>Explorá nuestros destinos</h2>
+
+<!-- 🔥 CONTENEDOR CLAVE -->
+<div class="filtro-container">
+
+<!-- 🔥 INPUTS FUERA -->
+<input type="radio" name="filtro" id="todos" checked>
+<input type="radio" id="cultural" name="filtro">
+<input type="radio" id="naturaleza" name="filtro">
+<input type="radio" id="gastronomico" name="filtro">
+<input type="radio" id="religioso" name="filtro">
+
+<!-- FILTROS SOLO VISUAL -->
+<section class="filtros">
+  <label for="todos">Todos</label>
+  <label for="cultural">Cultural</label>
+  <label for="naturaleza">Naturaleza</label>
+  <label for="gastronomico">Gastronómico</label>
+  <label for="religioso">Religioso</label>
+</section>
+
+  <!-- GALERIA -->
+  <section class="galeria">
+
+    <div class="card cultural">
+      <img src="../archivos/img/home/quebrada.jpg">
+      <h3>Quebrada de Humahuaca</h3>
+    </div>
+
+    <div class="card naturaleza">
+      <img src="../archivos/img/home/puna.jpg">
+      <h3>Salinas Grandes</h3>
+    </div>
+
+    <div class="card naturaleza">
+      <img src="../archivos/img/home/valles.jpg">
+      <h3>Valles</h3>
+    </div>
+
+    <div class="card naturaleza">
+      <img src="../archivos/img/home/yungas.jpg">
+      <h3>Yungas</h3>
+    </div>
+
+    <div class="card gastronomico">
+      <img src="../archivos/img/home/Comidas-Tipicas-de-Jujuy-2.jpg">
+      <h3>Gastronomía Jujeña</h3>
+    </div>
+
+    <div class="card religioso">
+      <img src="../archivos/img/home/PUNTA-CORRAL-5.jpg">
+      <h3>Punta Corral</h3>
+    </div>
+
+  </section>
+
+</div>
+
+<!-- TABLA -->
+<section>
+<h2>Precios estimados</h2>
+<table>
+<tr><th>Destino</th><th>Precio</th></tr>
+<tr><td>Quebrada de Humahuaca</td><td>$85.000</td></tr>
+<tr><td>Salinas Grandes</td><td>$120.000</td></tr>
+<tr><td>Valles</td><td>$95.000</td></tr>
+<tr><td>Yungas</td><td>$95.000</td></tr>
+</table>
+</section>
+
+</main>
+
+<script src="../js/home.js"></script>
+
+<!-- FOOTER -->
+<footer>
+  <div class="newsletter">
+    <h3>Suscribite al newsletter</h3>
+    <form>
+      <input type="email" placeholder="Tu correo electrónico">
+      <button type="submit">Suscribirse</button>
+    </form>
+  </div>
+</footer>
+
+</body>
+</html>
