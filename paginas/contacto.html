@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog</title>
+  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="../styles/contacto.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <nav class="mega-menu">
+        <div class="logo">
+        <img src="../archivos/img/logoJujuy.jpg" alt="Logo Jujuy" class="logo">
+      <h1>Jujuy Viajes</h1>
+        </div>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li class="has-submenu">
+          <a href="#">Destinos</a>
+          <div class="submenu">
+            <a href="destinos.html">Destinos</a>
+            <a href="blogDestinos.html">Blog</a>
+          </div>
+        </li>
+        <li><a href="agencias.html">Agencias</a></li>
+        <li><a href="precios.html">Precios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <button id="modo-toggle" aria-label="Alternar Modo Oscuro 🌙">🌙</button>
+      </ul>
+    </nav>
+  </header>
+
+<section class="contacto" id="seccion-contacto">
+  <h2>¿Tienes una duda?</h2>
+  <h2>¡Contáctanos!</h2>
+
+  <form action="#modal-exito" class="form-contacto">
+    <div class="full">
+      <label for="nombre">*Nombre:</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required minlength="3" />
+    </div>
+    <div>
+      <label for="email">*Correo:</label>
+      <input type="email" id="email" name="email" placeholder="email@ejemplo.com" required />
+    </div>
+    <div>
+      <label for="telefono">*Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono" pattern="[0-9]{8,15}" placeholder="Solo números" required />
+    </div>
+    <div class="full">
+      <label for="mensaje">*Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" placeholder="Escribe tu consulta aquí..." required minlength="10"></textarea>
+    </div>
+    
+     <div class="full">
+    <button type="submit" class="btn-enviar">Enviar mensaje</button>
+  </div>
+
+  <p class="full">*Todos los campos son obligatorios</p>
+</form>
+
+  <div id="modal-exito" class="modal">
+    <div class="modal-content">
+      <div class="spinner"></div>
+      <div class="mensaje-exito">
+        <h3>¡Mensaje enviado con éxito!</h3>
+        <p>Gracias por contactarnos. Te responderemos a la brevedad.</p>
+        <a href="#seccion-contacto" class="btn-cerrar">Cerrar</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- FOOTER -->
+<footer>
+    <div class="newsletter">
+      <h3>Suscribite al newsletter</h3>
+      <form  >
+        <input type="email" placeholder="Tu correo electrónico" required>
+        <button type="submit" class="button">Suscribirse</button>
+      </form>
+      <div class="redes">
+        <a href="https://www.facebook.com/"><img src="../archivos/icons/Facebook.svg" alt="Facebook"></a>
+        <a href="https://www.instagram.com/"><img src="../archivos/icons/Instagram.svg" alt="Instagram"></a>
+        <a href="https://www.tiktok.com/"><img src="../archivos/icons/tiktok.png" alt="Tiktok"></a>
+      </div>
+    </div>
+    <div class="mapa">
+        <iframe 
+        src="https://www.google.com.ar/maps/d/u/0/embed?mid=1WbCeuLtPgaIoTMBbMBepUsitzrJnUsHE"  
+        loading="lazy">
+        </iframe>
+    </div>
+  </footer>
+  <script src="../js/home.js" defer></script>
+
+</body>
+</html>
