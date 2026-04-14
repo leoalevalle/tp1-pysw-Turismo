@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog</title>
+  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="../styles/blog.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <nav class="mega-menu">
+        <div class="logo">
+        <img src="../archivos/img/logoJujuy.jpg" alt="Logo Jujuy" class="logo">
+      <h1>Jujuy Viajes</h1>
+        </div>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li class="has-submenu">
+          <a href="#">Destinos</a>
+          <div class="submenu">
+            <a href="destinos.html">Destinos</a>
+            <a href="blogDestinos.html">Blog</a>
+          </div>
+        </li>
+        <li><a href="agencias.html">Agencias</a></li>
+        <li><a href="precios.html">Precios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <button id="modo-toggle" aria-label="Alternar Modo Oscuro 🌙">🌙</button>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="blog-magazine">
+  <input type="radio" name="filtro" id="todos" checked hidden>
+  <input type="radio" name="filtro" id="capital" hidden>
+  <input type="radio" name="filtro" id="interior" hidden>
+  <input type="radio" name="filtro" id="musica" hidden>
+
+  <nav class="categories">
+    <label for="todos">Todos</label>
+    <label for="capital">Jujuy (capital)</label>
+    <label for="interior">Interior</label>
+    <label for="musica">Musica</label>
+  </nav>
+
+  <div class="grid-magazine">
+    <article class="post post-featured cat-interior">
+      <div class="post-img">
+        <img src="../archivos/img/blog/revista1.jpg" alt="Destino">
+      </div>
+      <div class="post-content">
+        <span class="tag">Interior</span>
+        <h2>Semana Santa – Purmamarca</h2>
+        <p>Semana Santa Purmamarca 2026 Miércoles 1 de abril Purmamarca 10:00 hs.- Programa de Streaming "Purmastream" Jueves 02 de abril Purmamarca 10:00 hs.- Feria Gastronómica "Sabores de Pascua en Purmamarca" en Plaza 9 de Julio 10:30 hs.- Acto Conmemoración a Caídos en Malvinas Cipaqui y Huachichocana 15:30 hs - Via Crusis Purmamarca 20 hs - Misa […]</p>
+      </div>
+    </article>
+
+    <article class="post cat-capital">
+      <img src="../archivos/img/blog/revista2.jpg" alt="Destino">
+      <span class="tag">Capital</span>
+      <h3>Muestra de Artes Visuales en el Tizón</h3>
+      <p>Muestra de Artes Visuales: “Mis Trazos en un Mundo para Todos” Abril: Mes de […]</p>
+    </article>
+
+    <article class="post cat-musica">
+      <img src="../archivos/img/blog/revista4.jpg" alt="Destino">
+      <span class="tag">Musica</span>
+      <h3>Axel Milanés en Concierto</h3>
+      <p>Desde Cuba: Axel Milanés en concierto La canción es la protagonista. Está por […]</p>
+    </article>
+
+    <article class="post cat-capital">
+      <img src="../archivos/img/blog/revista6.jpeg" alt="Destino">
+      <span class="tag">Capital</span>
+      <h3>2° Pachamanga Fest</h3>
+      <p>¡Se viene la 2° edición de Pachamanga Fest! Habrá demostraciones de baile, concurso […]</p>
+    </article>
+
+    <article class="post post-featured cat-interior">
+      <div class="post-img">
+        <img src="../archivos/img/blog/revista5.jpg" alt="Destino">
+      </div>
+      <div class="post-content">
+        <span class="tag">Interior</span>
+        <h2>Gran Festi Feria y Trueque – Juella</h2>
+        <p>Cronograma de Actividades 10:00 Hs. Actos protocolares. 11:00 Hs. Apertura de la 4 edición de la festi feria y trueque en churcal de Juella. 11:30 Hs. Concurso de stand de productores, artesanos y asadores. 12:00 Hs. Gran venta de comidas regionales y productos de la zona. Por la tardes campeonato de futbol femenino y masculino. […]</p>
+      </div>
+    </article>
+
+    <article class="post cat-musica">
+      <img src="../archivos/img/blog/revista3.jpg" alt="Destino">
+      <span class="tag">Musica</span>
+      <h3>Pitín Zalazar</h3>
+      <p>Peña El Encuentro presenta show de folclore en vivo de los […]</p>
+    </article>
+
+    <article class="post cat-capital">
+      <img src="../archivos/img/blog/revista7.jpeg" alt="Destino">
+      <span class="tag">Capital</span>
+      <h3>Gran Fogón Fundación de Jujuy</h3>
+      <p>La Federación Gaucha Jujeña tiene el agrado de […]</p>
+    </article>
+
+  </div>
+
+  <div class="comments-section">
+    <h3>Comentarios del Lector</h3>
+    <div class="comment">
+      <div class="avatar-css"></div>
+      <div class="comment-body">
+        <strong>@viajero_norte</strong>
+        <p>Increíble nota. Me recordó a mi último viaje por Purmamarca.</p>
+      </div>
+    </div>
+    <div class="comment">
+      <div class="avatar-css"></div>
+      <div class="comment-body">
+        <strong>@Mano-de-d10s</strong>
+        <p>A Jujuy siempre se vuelve !</p>
+      </div>
+    </div>
+    <div class="comment">
+      <div class="avatar-css"></div>
+      <div class="comment-body">
+        <strong>@Soy-Batman</strong>
+        <p>Los mejores paisajes del mundo</p>
+      </div>
+    </div>
+    <form  >
+        <textarea id="mensaje" name="mensaje" required minlength="10"></textarea>
+        <button type="submit" class="button">Comentar</button>
+      </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="newsletter">
+      <h3>Suscribite al newsletter</h3>
+      <form  >
+        <input type="email" placeholder="Tu correo electrónico" required>
+        <button type="submit" class="button">Suscribirse</button>
+      </form>
+      <div class="redes">
+        <a href="https://www.facebook.com/"><img src="../archivos/icons/Facebook.svg" alt="Facebook"></a>
+        <a href="https://www.instagram.com/"><img src="../archivos/icons/Instagram.svg" alt="Instagram"></a>
+        <a href="https://www.tiktok.com/"><img src="../archivos/icons/tiktok.png" alt="Tiktok"></a>
+      </div>
+    </div>
+    <div class="mapa">
+        <iframe 
+        src="https://www.google.com.ar/maps/d/u/0/embed?mid=1WbCeuLtPgaIoTMBbMBepUsitzrJnUsHE"  
+        loading="lazy">
+        </iframe>
+    </div>
+  </footer>
+  <script src="../js/home.js" defer></script>
+
+</body>
+</html>

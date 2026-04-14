@@ -1,0 +1,114 @@
+/* --- Estructura Newspaper Grid --- */
+.grid-magazine {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.post-featured {
+  grid-column: span 2;
+  grid-row: span 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-featured img {
+  height: 450px; 
+}
+
+/* --- Efecto Scroll Reveal --- */
+.post {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  animation: reveal linear both;
+  animation-timeline: view();
+  animation-range: entry 50% cover 50%;
+}
+
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Filtrado --- */
+#capital:checked ~ .grid-magazine .post:not(.cat-capital),
+#interior:checked ~ .grid-magazine .post:not(.cat-interior),
+#musica:checked ~ .grid-magazine .post:not(.cat-musica) {
+  display: none;
+}
+
+/* Estilo de los Tags */
+.categories label {
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+#todos:checked ~ .categories label[for="todos"],
+#capital:checked ~ .categories label[for="capital"],
+#interior:checked ~ .categories label[for="interior"],
+#musica:checked ~ .categories label[for="musica"] {
+  background: var(--accent-color, #ff7a2c);
+  color: white;
+}
+
+/* --- Avatares --- */
+.avatar-css {
+  width: 50px;
+  height: 50px;
+  background: #ccc;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Cabeza */
+.avatar-css::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #888;
+  border-radius: 50%;
+  top: 10px;
+  left: 15px;
+}
+
+/* Cuerpo */
+.avatar-css::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  background: #666;
+  border-radius: 50%;
+  bottom: -15px;
+  left: 5px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .grid-magazine { grid-template-columns: 1fr 1fr; }
+  .post-featured { grid-column: span 2; }
+}
+
+@media (max-width: 600px) {
+  .grid-magazine { grid-template-columns: 1fr; }
+  .post-featured { grid-column: span 1; }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; 
+}
+
+.post img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}

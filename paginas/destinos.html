@@ -40,17 +40,17 @@
 
 <h2>Explorá nuestros destinos</h2>
 
-<!-- 🔥 CONTENEDOR CLAVE -->
+<!--  CONTENEDOR CLAVE -->
 <div class="filtro-container">
 
-<!-- 🔥 INPUTS FUERA -->
+<!--  INPUTS FUERA -->
 <input type="radio" name="filtro" id="todos" checked>
 <input type="radio" id="cultural" name="filtro">
 <input type="radio" id="naturaleza" name="filtro">
 <input type="radio" id="gastronomico" name="filtro">
 <input type="radio" id="religioso" name="filtro">
 
-<!-- FILTROS SOLO VISUAL -->
+<!-- FILTROS -->
 <section class="filtros">
   <label for="todos">Todos</label>
   <label for="cultural">Cultural</label>
@@ -114,14 +114,26 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="newsletter">
-    <h3>Suscribite al newsletter</h3>
-    <form>
-      <input type="email" placeholder="Tu correo electrónico">
-      <button type="submit">Suscribirse</button>
-    </form>
-  </div>
-</footer>
+    <div class="newsletter">
+      <h3>Suscribite al newsletter</h3>
+      <form  >
+        <input type="email" placeholder="Tu correo electrónico" required>
+        <button type="submit" class="button">Suscribirse</button>
+      </form>
+      <div class="redes">
+        <a href="https://www.facebook.com/"><img src="../archivos/icons/Facebook.svg" alt="Facebook"></a>
+        <a href="https://www.instagram.com/"><img src="../archivos/icons/Instagram.svg" alt="Instagram"></a>
+        <a href="https://www.tiktok.com/"><img src="../archivos/icons/tiktok.png" alt="Tiktok"></a>
+      </div>
+    </div>
+    <div class="mapa">
+        <iframe 
+        src="https://www.google.com.ar/maps/d/u/0/embed?mid=1WbCeuLtPgaIoTMBbMBepUsitzrJnUsHE"  
+        loading="lazy">
+        </iframe>
+    </div>
+  </footer>
+  <script src="../js/home.js" defer></script>
 
 </body>
 </html>
