@@ -5,7 +5,7 @@
   --header-bg: #d35400;
   --card-bg: #fff;
   --highlight: #f1df96;
-  --footer-bg: #222;
+  --footer-bg: #222222;
 }
 
 body.dark-mode {
@@ -33,17 +33,6 @@ header {
   color: white;
   padding: 0;
   position: relative;
-}
-
-header::before {
-  content: "";
-  position: absolute;
-  top: 20px; right: 0;
-  width: 90%; min-height: 150px;
-  background: url('../assets/img/banner2.png') no-repeat right center / contain;
-  mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
-  z-index: 0;
 }
 
 header > * { position: relative; z-index: 1; }
@@ -106,9 +95,6 @@ nav a:hover, .submenu a:hover {
 }
 
 .has-submenu:hover .submenu { display: flex; }
-
-/* MODO OSCURO NAV */
-body.dark-mode nav ul li a { background-color: rgba(255, 255, 255, 0.08); }
 
 /* BOTÓN MODO OSCURO */
 #modo-toggle {
