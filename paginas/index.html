@@ -5,34 +5,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inicio</title>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="../styles/main.css">
   <link rel="stylesheet" href="../styles/home.css">
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <nav class="mega-menu">
-        <div class="logo">
-        <img src="../archivos/img/logoJujuy.jpg" alt="Logo Jujuy" class="logo">
-      <h1>Jujuy Viajes</h1>
-        </div>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li class="has-submenu">
-          <a href="#">Destinos</a>
-          <div class="submenu">
-            <a href="destinos.html">Destinos</a>
-            <a href="blogDestinos.html">Blog</a>
-          </div>
-        </li>
-        <li><a href="agencias.html">Agencias</a></li>
-        <li><a href="precios.html">Precios</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-        <button id="modo-toggle" aria-label="Alternar Modo Oscuro 🌙">🌙</button>
-      </ul>
-    </nav>
-  </header>
+<!-- HEADER -->
+<header>
+  <nav class="navbar navbar-expand-lg fixed-top transition-base shadow-sm">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="../archivos/img/logoJujuy.jpg" alt="Logo Jujuy" width="40" height="40" class="me-2 rounded">
+        <span class="h4 mb-0 fw-bold">Jujuy Viajes</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Destinos</a>
+            <ul class="dropdown-menu shadow border-0">
+              <li><a class="dropdown-item" href="destinos.html">Ver Destinos</a></li>
+              <li><a class="dropdown-item" href="blogDestinos.html">Blog de Viajes</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="agencias.html">Agencias</a></li>
+          <li class="nav-item"><a class="nav-link" href="precios.html">Precios</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item ms-lg-3">
+            <button id="btn-theme" class="btn btn-outline-secondary rounded-circle">
+              <i id="theme-icon" class="bi bi-moon-fill"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
 
   <!-- HERO -->
   <section class="hero">
@@ -92,26 +105,31 @@
 </section>
   
 <!-- FOOTER -->
-<footer>
-    <div class="newsletter">
-      <h3>Suscribite al newsletter</h3>
-      <form  >
-        <input type="email" placeholder="Tu correo electrónico" required>
-        <button type="submit" class="button">Suscribirse</button>
-      </form>
-      <div class="redes">
-        <a href="https://www.facebook.com/"><img src="../archivos/icons/Facebook.svg" alt="Facebook"></a>
-        <a href="https://www.instagram.com/"><img src="../archivos/icons/Instagram.svg" alt="Instagram"></a>
-        <a href="https://www.tiktok.com/"><img src="../archivos/icons/tiktok.png" alt="Tiktok"></a>
+<footer class="py-5">
+  <div class="container">
+    <div class="row gy-4 align-items-center">
+      <div class="col-md-6 text-center text-md-start">
+        <h3 class="fw-bold">Suscribite al newsletter</h3>
+        <form class="d-flex gap-2 mt-3 mb-4">
+          <input type="email" class="form-control" placeholder="Tu correo electrónico" required>
+          <button type="submit" class="btn btn-primary">Suscribirse</button>
+        </form>
+        <div class="d-flex gap-3 justify-content-center justify-content-md-start fs-4">
+          <a href="#" class="text-reset"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-reset"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-reset"><i class="bi bi-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="ratio ratio-16x9 rounded overflow-hidden shadow">
+          <iframe src="https://www.google.com.ar/maps/d/u/0/embed?mid=1WbCeuLtPgaIoTMBbMBepUsitzrJnUsHE" loading="lazy"></iframe>
+        </div>
       </div>
     </div>
-    <div class="mapa">
-        <iframe 
-        src="https://www.google.com.ar/maps/d/u/0/embed?mid=1WbCeuLtPgaIoTMBbMBepUsitzrJnUsHE"  
-        loading="lazy">
-        </iframe>
-    </div>
-  </footer>
+  </div>
+</footer>
+
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../js/home.js" defer></script>
 
 </body>
