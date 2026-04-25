@@ -47,60 +47,59 @@
   </nav>
 </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="video-bg">
-        <iframe 
-          src="https://www.youtube.com/embed/aqOC_pKYUv8?autoplay=1&mute=1&loop=1&playlist=aqOC_pKYUv8&controls=0&showinfo=0&rel=0&modestbranding=1"
-          frameborder="0" 
-          allow="autoplay; encrypted-media">
-        </iframe>
-      </div>
-    <div class="overlay">
-        <div class="overlay-texto">
-            <h2>¡Unete a la Aventura!</h2>
-            <p>Descubre los paisajes más asombrosos de Jujuy</p>
-          </div>
-    </div>
-  </section>
+<!--- HERO --->
+<section class="hero position-relative overflow-hidden vh-100 d-flex align-items-center justify-content-center text-white">
+  <div class="video-bg position-absolute top-0 start-0 w-100 h-100 z-n1">
+    <iframe class="w-100 h-100 object-fit-cover"
+      src="https://www.youtube.com/embed/aqOC_pKYUv8?autoplay=1&mute=1&loop=1&playlist=aqOC_pKYUv8&controls=0&showinfo=0&rel=0&modestbranding=1"
+      allow="autoplay; encrypted-media">
+    </iframe>
+  </div>
+  <div class="overlay position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 z-0"></div>
+  <div class="container position-relative z-1 text-center">
+    <h2 class="display-3 fw-bold mb-3">¡Unete a la Aventura!</h2>
+    <p class="lead fs-3">Descubre los paisajes más asombrosos de Jujuy</p>
+  </div>
+</section>
 
-  <!-- DESTACADOS -->
-  <section class="clases-destacadas">
-    <h2>Destinos Destacados</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="../archivos/img/home/puna.jpg" alt="puna">
-        <h3>Puna</h3>
-      </div>
-      <div class="card">
-        <img src="../archivos/img/home/quebrada.jpg" alt="quebrada">
-        <h3>Quebrada</h3>
-      </div>
-      <div class="card">
-        <img src="../archivos/img/home/valles.jpg" alt="valles">
-        <h3>Valles</h3>
-      </div>
-      <div class="card">
-        <img src="../archivos/img/home/yungas.jpg" alt="yungas">
-        <h3>Yungas</h3>
+<!--- Destacados --->
+<section class="container py-5">
+  <h2 class="text-center mb-5 fw-bold section-title">Destinos Destacados</h2>
+  <div class="row g-4">
+    <div class="col-md-3 col-sm-6">
+      <div class="card h-100 border-0 shadow-sm transition-base hover-zoom">
+        <img src="../archivos/img/home/puna.jpg" class="card-img-top" alt="puna">
+        <div class="card-body text-center">
+          <h3 class="h5 card-title mb-0">Puna</h3>
+        </div>
       </div>
     </div>
-  </section>
+    </div>
+</section>
 
-  <!-- CONTADOR ANIMADO -->
-  <section class="contador">
-    <h2 class="section-title">Más de <span class="counter" data-target="500"> </span> visitantes</h2>
-  </section>
+<!--- Contador --->
+<section class="py-5 bg-primary text-white text-center">
+  <div class="container">
+    <h2 class="display-4 fw-bold mb-0">Más de <span class="counter" data-target="500">0</span> visitantes</h2>
+  </div>
+</section>
 
-  <!-- TESTIMONIOS -->
-  <section class="testimonios">
-  <h2>Comentarios</h2>
-  <div class="carrusel-slider">
-    <div class="testimonio">"Muy cálida bienvenida de los jujeños" - <strong>Rocio F.</strong></div>
-    <div class="testimonio">"Excelente la calidad del servicio de transporte" - <strong>Juan C.</strong></div>
-    <div class="testimonio">"Los paisajes son realmente maravillosos" - <strong>Leonel M.</strong></div>
-    <div class="testimonio">"Me gustó mucho la experiencia" - <strong>Angel D.</strong></div>
-    <div class="testimonio">"Dicen que a Jujuy siempre se vuelve" - <strong>Agustina S.</strong></div>
+<!--- Carrusel --->
+<section class="py-5 bg-light-subtle">
+  <div class="container text-center">
+    <h2 class="mb-5 fw-bold section-title">Comentarios</h2>
+    <div id="carouselTestimonios" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <p class="fs-4 italic">"Muy cálida bienvenida de los jujeños"</p>
+          <p class="fw-bold">- Rocio F.</p>
+        </div>
+        <div class="carousel-item">
+          <p class="fs-4 italic">"Excelente la calidad del servicio de transporte"</p>
+          <p class="fw-bold">- Juan C.</p>
+        </div>
+        </div>
+    </div>
   </div>
 </section>
   
@@ -131,6 +130,7 @@
 
   <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../js/home.js" defer></script>
+  <script src="../js/index.js" defer></script>
 
 </body>
 </html>
