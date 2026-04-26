@@ -46,7 +46,7 @@ input:focus, textarea:focus {
 }
 
 /* VALIDACIÓN */
-input:valid, textarea:valid {
+/*input:valid, textarea:valid {
   border-color: #4caf50;
 }
 
@@ -54,6 +54,7 @@ input:not(:placeholder-shown):invalid,
 textarea:not(:placeholder-shown):invalid {
   border-color: #f44336;
 }
+*/
 
 /* ===== LABELS ===== */
 label {
