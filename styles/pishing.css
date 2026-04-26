@@ -1,0 +1,49 @@
+body {
+  background-color: #f5f6f7;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.siu-header {
+  background-color: #ffffff;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #2d89ef;
+  color: white !important;
+}
+
+.form-control {
+  border-radius: 6px;
+}
+
+.btn-info {
+  background-color: #2d89ef;
+  border: none;
+}
+
+.btn-info:hover {
+  background-color: #1b5fa7;
+}
+
+.modal-content {
+  border-radius: 12px;
+}
+
+.fraud-signal {
+  background: #fff;
+  border-left: 4px solid #e94560;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.example-card {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.btn-outline-danger {
+  border-width: 2px;
+}

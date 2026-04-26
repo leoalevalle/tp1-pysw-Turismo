@@ -1,118 +1,260 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inicio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+  <title>SIU Guaraní - Módulo Educativo: Phishing</title>
+  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="../styles/main.css">
-  <link rel="stylesheet" href="../styles/home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../styles/pishing.css">
 </head>
 <body>
 
-<!-- HEADER -->
-<header>
-  <nav class="navbar navbar-expand-lg fixed-top transition-base shadow-sm">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="../archivos/img/logoJujuy.jpg" alt="Logo Jujuy" width="40" height="40" class="me-2 rounded">
-        <span class="h4 mb-0 fw-bold"><i class="bi bi-geo-alt-fill me-1"></i> Jujuy Viajes</span>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto align-items-center">
-          <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door me-1"></i>Inicio</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"><i class="bi bi-map me-1"></i>Destinos</a>
-            <ul class="dropdown-menu shadow border-0">
-              <li><a class="dropdown-item" href="destinos.html"><i class="bi bi-binoculars me-2"></i>Ver Destinos</a></li>
-              <li><a class="dropdown-item" href="blogDestinos.html"><i class="bi bi-journal-bookmark-fill me-2"></i>Blog de Viajes</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="agencias.html"><i class="bi bi-building me-1"></i>Agencias</a></li>
-          <li class="nav-item"><a class="nav-link" href="precios.html"><i class="bi bi-tags me-1"></i>Precios</a></li>
-          <li class="nav-item"><a class="nav-link" href="contacto.html"><i class="bi bi-envelope-paper me-1"></i>Contacto</a></li>
-          <li class="nav-item"><a class="nav-link" href="pishing.html"><i class="bi bi-envelope-paper me-1"></i>Phishing</a></li>
-          <li class="nav-item ms-lg-3">
-            <button id="btn-theme" class="btn btn-outline-secondary rounded-circle">
-              <i id="theme-icon" class="bi bi-moon-fill"></i>
-            </button>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
+<div class="modal fade" id="welcomeModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
 
-<!--- FOOTER --->
-<footer class="py-5 mt-4">
-  <div class="container">
-    <div class="row gy-4 align-items-center">
-      <div class="col-md-6 text-center text-md-start">
-        <h3 class="fw-bold"><i class="bi bi-envelope-paper-fill me-2"></i> Suscribite al newsletter</h3>
-        
-        <form id="newsletterForm" class="d-flex flex-column flex-sm-row gap-2 mt-3 mb-4">
-          <div class="flex-grow-1">
-            <input type="email" id="emailInput" class="form-control" 
-                   placeholder="Tu correo electrónico" 
-                   required 
-                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
-                   title="Ingresá un email válido (ej: nombre@dominio.com)">
-            <div id="emailFeedback" class="form-text text-danger small mt-1" style="display:none;">
-              <i class="bi bi-exclamation-triangle-fill me-1"></i>Correo inválido
-            </div>
-            <div id="sanitizeMsg" class="form-text text-success small mt-1" style="display:none;">
-              <i class="bi bi-check-circle-fill me-1"></i>
-            </div>
-          </div>
-          <button type="submit" class="btn btn-primary">
-            <i class="bi bi-send-fill me-1"></i> Suscribirse
-          </button>
-        </form>
-        
-        <div class="footer-social d-flex gap-3 justify-content-center justify-content-md-start mt-3">
-          <a href="https://facebook.com/jujuyviajes" target="_blank" rel="noopener noreferrer"
-             class="social-link" aria-label="Seguinos en Facebook" title="Facebook">
-            <div class="sprite-icon sprite-facebook"></div>
-          </a>
-          
-          <a href="https://instagram.com/jujuyviajes" target="_blank" rel="noopener noreferrer"
-             class="social-link" aria-label="Seguinos en Instagram" title="Instagram">
-            <div class="sprite-icon sprite-instagram"></div>
-          </a>
-          
-          <a href="https://wa.me/5493884000000" target="_blank" rel="noopener noreferrer"
-             class="social-link" aria-label="Contactanos por WhatsApp" title="WhatsApp">
-            <div class="sprite-icon sprite-whatsapp"></div>
-          </a>
-          
-          <a href="https://youtube.com/@jujuyviajes" target="_blank" rel="noopener noreferrer"
-             class="social-link" aria-label="Suscribite en YouTube" title="YouTube">
-            <div class="sprite-icon sprite-youtube"></div>
-          </a>
-        </div>
-        <p class="small text-muted mt-3">
-          <i class="bi bi-image"></i> Iconos unificados en sprite CSS (background-position)
-        </p>
+      <div class="modal-header bg-danger text-white">
+        <h5 class="modal-title">ALERTA DE SEGURIDAD URGENTE</h5>
       </div>
-      <div class="col-md-6">
-        <div class="ratio ratio-16x9 rounded overflow-hidden shadow">
-          <iframe src="https://www.google.com.ar/maps/d/u/0/embed?mid=1WbCeuLtPgaIoTMBbMBepUsitzrJnUsHE" 
-                  loading="lazy" 
-                  title="Mapa Jujuy"></iframe>
+
+      <div class="modal-body">
+        <div class="alert alert-warning">
+          <strong>¡ATENCIÓN!</strong> No se completó el formulario de reinscripción.
+        </div>
+
+        <p>Por favor accedé a tu cuenta y completá el formulario.</p>
+
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+          Aceptar
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div id="mainContent" style="display:none;">
+  <div class="siu-container">
+    <header class="siu-header d-flex align-items-center p-3 border-bottom">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="../archivos/img/pishing/siulogo.png" alt="Logo SIU" class="me-3" style="height: 60px;">
+      </a> 
+    </header>
+
+    <nav class="nav nav-tabs bg-light px-3">
+      <a class="nav-link active fw-bold" href="#">Acceso</a>
+      <a class="nav-link text-secondary" href="#">Fechas de Examen</a>
+      <a class="nav-link text-secondary" href="#">Horarios de Cursadas</a>
+      <a class="nav-link text-secondary" href="#">Validador de Certificados</a>
+      <a class="nav-link text-secondary" href="#">Ayuda</a>
+    </nav>
+
+    <div class="container-fluid p-5">
+      <div class="row gx-5">
+        <div class="col-md-5 border-end">
+          <h2 class="h3 mb-4 fw-bold">Ingresá tus datos</h2>
+          <form id="loginForm">
+            <div class="mb-3">
+              <label class="form-label text-secondary">Usuario</label>
+              <input type="text" id="usuario" class="form-control form-control-lg bg-light" placeholder=" ">
+            </div>
+            <div class="mb-3">
+              <label class="form-label text-secondary">Contraseña</label>
+              <input type="password" id="password" class="form-control form-control-lg bg-light" placeholder=" ">
+            </div>
+            <button type="submit" class="btn btn-info text-white px-4">Ingresar</button>
+          </form>
+          <div class="mt-4">
+            <a href="#" class="text-decoration-none small text-info">¿Olvidaste tu contraseña o sos un usuario nuevo?</a>
+          </div>
+          
+          <div class="mt-5 pt-4 border-top">
+            <button class="btn btn-outline-danger w-100 fw-bold py-3" data-bs-toggle="modal" data-bs-target="#phishingModal">
+              <i class="bi bi-shield-exclamation me-2"></i> ANALIZAR SEGURIDAD (Simulación)
+            </button>
+          </div>
+        </div>
+
+        <div class="col-md-7">
+          <h2 class="h3 mb-4 fw-bold">.SIU Guaraní.</h2>
+          <p class="text-secondary">Algunas de las cosas que podés hacer con este sistema son:</p>
+          <ul class="list-unstyled ms-3 mb-4">
+            <li class="mb-2"><i class="bi bi-dot"></i> Inscribirte a materias y exámenes.</li>
+            <li class="mb-2"><i class="bi bi-dot"></i> Consultar el plan de tu propuesta.</li>
+            <li class="mb-2"><i class="bi bi-dot"></i> Consultar tu historia académica.</li>
+            <li class="mb-2"><i class="bi bi-dot"></i> Actualizar tus datos personales.</li>
+          </ul>
+          <div class="p-4 border rounded bg-white shadow-sm">
+            <img src="../archivos/img/pishing/siuimg.jpg" class="img-fluid rounded" alt="Protocolo UNJu">
+          </div>
         </div>
       </div>
     </div>
   </div>
-</footer>
+¿
+<div class="modal fade modal-phishing" id="phishingModal" tabindex="-1" aria-labelledby="phishingModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content border-0 shadow-lg">
 
+      <div class="modal-header bg-danger text-white border-0">
+        <div class="d-flex align-items-center">
+          <i class="fas fa-fish fs-1 me-3"></i>
+          <div>
+            <h5 class="modal-title fw-bold" id="phishingModalLabel">
+              ⚠️ SIMULACIÓN EDUCATIVA DE PHISHING
+            </h5>
+            <p class="mb-0 small opacity-75">Aprende a identificar intentos de fraude</p>
+          </div>
+        </div>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body p-4">
+
+        <div class="alert alert-warning border-0 rounded-3 mb-4">
+          <div class="d-flex align-items-start">
+            <i class="fas fa-exclamation-triangle fs-3 me-3 text-warning"></i>
+            <div>
+              <strong class="d-block">⚠️ ADVERTENCIA IMPORTANTE:</strong>
+              <span>Esto es una <strong>simulación educativa</strong>. No se está realizando ningún robo de datos real. El objetivo es enseñarte a identificar intentos de phishing para que puedas protegerte.</span>
+            </div>
+          </div>
+        </div>
+
+        <h5 class="text-danger mb-3">
+          <i class="fas fa-flag-checkered me-2"></i> Señales de Alerta de Phishing:
+        </h5>
+
+        <div class="fraud-signal">
+          <i class="fas fa-link me-2 text-danger"></i>
+          <strong>URL sospechosa:</strong> Verifica que la dirección web comience con "https://" y sea la oficial. 
+          <span class="badge bg-danger ms-2">Ejemplo falso: unju-alumnos.xyz</span>
+        </div>
+
+        <div class="fraud-signal">
+          <i class="fas fa-clock me-2 text-danger"></i>
+          <strong>Mensajes urgentes:</strong> "Tu cuenta será cerrada", "Actualiza tus datos ahora" o "Accede inmediatamente".
+        </div>
+
+        <div class="fraud-signal">
+          <i class="fas fa-spell-check me-2 text-danger"></i>
+          <strong>Errores ortográficos:</strong> Muchos correos falsos tienen faltas de ortografía o gramática extraña.
+        </div>
+
+        <div class="fraud-signal">
+          <i class="fas fa-lock me-2 text-danger"></i>
+          <strong>Solicitud de datos sensibles:</strong> Ninguna institución seria te pedirá tu contraseña por correo o enlaces externos.
+        </div>
+
+        <h5 class="mt-4 text-primary mb-3">
+          <i class="fas fa-lightbulb me-2"></i> Ejemplo real de Phishing:
+        </h5>
+
+        <div class="border rounded-3 p-3 mb-4 bg-light">
+          <div class="d-flex align-items-start">
+            <i class="fas fa-envelope fs-4 text-danger me-3"></i>
+            <div>
+              <div class="fw-bold text-danger">📧 Correo sospechoso recibido:</div>
+              <div class="bg-white p-2 rounded-2 mt-2 border">
+                <code style="font-size: 14px;">
+                  <strong>De:</strong> soporte@unju-seguridad.com<br>
+                  <strong>Asunto:</strong> ⚠️ ALERTA: Tu cuenta será SUSPENDIDA<br><br>
+                  "Estimado alumno, hemos detectado actividad inusual en tu cuenta. 
+                  Para evitar la suspensión definitiva, debes verificar tus datos en los próximos 24 horas:
+                  <strong class="text-danger">siu-verificacion.xyz</strong>
+                  <br><br>
+                  Caso contrario, tu acceso será bloqueado permanentemente."
+                </code>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-primary bg-opacity-10 rounded-3 p-3 mb-4">
+          <h6 class="fw-bold mb-3">
+            <i class="fas fa-question-circle me-2"></i> ¿Qué ves sospechoso en este mensaje?
+          </h6>
+
+          <form id="quizPhishing">
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="checkbox" name="sospechoso" value="url" id="checkUrl">
+              <label class="form-check-label" for="checkUrl">
+                🔗 <strong>URL rara/sospechosa</strong> (siu-verificacion.xyz no es el dominio oficial)
+              </label>
+            </div>
+
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="checkbox" name="sospechoso" value="urgencia" id="checkUrgencia">
+              <label class="form-check-label" for="checkUrgencia">
+                ⏰ <strong>Mensaje urgente</strong> ("tu cuenta será suspendida en 24 horas")
+              </label>
+            </div>
+
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="checkbox" name="sospechoso" value="datos" id="checkDatos">
+              <label class="form-check-label" for="checkDatos">
+                🔒 <strong>Solicitud de datos personales</strong> (pide verificar información sensible)
+              </label>
+            </div>
+
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="checkbox" name="sospechoso" value="normal" id="checkNormal">
+              <label class="form-check-label text-muted" for="checkNormal">
+                ✅ <strong>Mensaje normal/legítimo</strong>
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-danger mt-3 px-4 rounded-pill">
+              <i class="fas fa-shield-alt me-2"></i> Verificar mi respuesta
+            </button>
+          </form>
+
+          <!-- RESULTADO DEL QUIZ -->
+          <div id="resultadoQuiz" class="mt-3" style="display: none;"></div>
+        </div>
+
+        <!-- CONSEJOS DE PROTECCIÓN -->
+        <div class="alert alert-success border-0 rounded-3">
+          <div class="d-flex align-items-start">
+            <i class="fas fa-shield-alt fs-3 me-3 text-success"></i>
+            <div>
+              <strong class="d-block mb-2">✅ Cómo protegerte del Phishing:</strong>
+              <ul class="mb-0 ps-3">
+                <li>✓ <strong>Verificá siempre la URL</strong> en la barra de direcciones antes de ingresar datos</li>
+                <li>✓ <strong>No hagas clic en enlaces</strong> de correos sospechosos (mejor escribir la URL manualmente)</li>
+                <li>✓ <strong>Activa la autenticación de dos factores (2FA)</strong> cuando esté disponible</li>
+                <li>✓ <strong>Contactá directamente a la institución</strong> si tenés dudas (usando canales oficiales)</li>
+                <li>✓ <strong>Reportá correos sospechosos</strong> al departamento de TI de tu universidad</li>
+                <li>✓ <strong>No compartas NUNCA tu contraseña</strong> por correo, teléfono o mensaje</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- FOOTER con botones de acción -->
+      <div class="modal-footer bg-light border-0 py-3">
+        <button type="button" class="btn btn-secondary rounded-pill px-4" data-bs-dismiss="modal">
+          <i class="fas fa-times me-2"></i> Cerrar
+        </button>
+        <button type="button" class="btn btn-primary rounded-pill px-4" id="btnMasInfo">
+          <i class="fas fa-graduation-cap me-2"></i> Más información
+        </button>
+      </div>
+
+    </div>
+  </div>
+  </div>
+</div>
+
+<!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="../js/home.js" defer></script>
-<script src="../js/index.js" defer></script>
+<script src="../js/pishing.js"></script>
+
 </body>
 </html>
