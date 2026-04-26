@@ -40,3 +40,39 @@ footer {
 .transition-base {
     transition: all 0.3s ease-in-out;
 }
+
+.sprite-icon {
+    background-image: url('../archivos/icons/css_sprites.png');
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-size: 160px 40px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+  .sprite-youtube {
+    background-position: 0 0;
+  }
+  .sprite-whatsapp {
+    background-position: -40px 0;
+  }
+  .sprite-facebook {
+    background-position: -80px 0;
+  }
+  .sprite-instagram {
+    background-position: -120px 0;
+  }
+
+  .social-link {
+    display: inline-block;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+  }
+  
+  .social-link:hover {
+    transform: translateY(-3px);
+  }
+  
+  .social-link:hover .sprite-icon {
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+  }

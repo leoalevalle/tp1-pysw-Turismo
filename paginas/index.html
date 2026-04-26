@@ -18,24 +18,25 @@
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="index.html">
         <img src="../archivos/img/logoJujuy.jpg" alt="Logo Jujuy" width="40" height="40" class="me-2 rounded">
-        <span class="h4 mb-0 fw-bold">Jujuy Viajes</span>
+        <span class="h4 mb-0 fw-bold"><i class="bi bi-geo-alt-fill me-1"></i> Jujuy Viajes</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto align-items-center">
-          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door me-1"></i>Inicio</a></li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Destinos</a>
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"><i class="bi bi-map me-1"></i>Destinos</a>
             <ul class="dropdown-menu shadow border-0">
-              <li><a class="dropdown-item" href="destinos.html">Ver Destinos</a></li>
-              <li><a class="dropdown-item" href="blogDestinos.html">Blog de Viajes</a></li>
+              <li><a class="dropdown-item" href="destinos.html"><i class="bi bi-binoculars me-2"></i>Ver Destinos</a></li>
+              <li><a class="dropdown-item" href="blogDestinos.html"><i class="bi bi-journal-bookmark-fill me-2"></i>Blog de Viajes</a></li>
             </ul>
           </li>
-          <li class="nav-item"><a class="nav-link" href="agencias.html">Agencias</a></li>
-          <li class="nav-item"><a class="nav-link" href="precios.html">Precios</a></li>
-          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="agencias.html"><i class="bi bi-building me-1"></i>Agencias</a></li>
+          <li class="nav-item"><a class="nav-link" href="precios.html"><i class="bi bi-tags me-1"></i>Precios</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html"><i class="bi bi-envelope-paper me-1"></i>Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="pishing.html"><i class="bi bi-envelope-paper me-1"></i>Phishing</a></li>
           <li class="nav-item ms-lg-3">
             <button id="btn-theme" class="btn btn-outline-secondary rounded-circle">
               <i id="theme-icon" class="bi bi-moon-fill"></i>
@@ -47,7 +48,7 @@
   </nav>
 </header>
 
-<!--- HERO --->
+<!-- HERO -->
 <section class="hero position-relative overflow-hidden vh-100 d-flex align-items-center justify-content-center text-white">
   <div class="video-bg position-absolute top-0 start-0 w-100 h-100 z-n1">
     <iframe class="w-100 h-100 object-fit-cover"
@@ -55,83 +56,394 @@
       allow="autoplay; encrypted-media">
     </iframe>
   </div>
-  <div class="overlay position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 z-0"></div>
-  <div class="container position-relative z-1 text-center">
-    <h2 class="display-3 fw-bold mb-3">¡Unete a la Aventura!</h2>
-    <p class="lead fs-3">Descubre los paisajes más asombrosos de Jujuy</p>
+  <div class="overlay position-absolute top-0 start-0 w-100 h-100 z-0" style="background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.4) 100%);"></div>
+  <div class="container position-relative z-1 text-center" id="heroText">
+    <div class="hero-content">
+      <span class="badge bg-warning text-dark mb-3 px-3 py-2 rounded-pill animate-badge">
+        <i class="bi bi-stars me-1"></i> Experiencia Única
+      </span>
+      <h2 class="display-2 fw-bold mb-3 animate-text">¡Unete a la Aventura!</h2>
+      <p class="lead fs-3 animate-text-delay mb-4">Descubre los paisajes más asombrosos de Jujuy</p>
+      <div class="d-flex gap-3 justify-content-center animate-buttons">
+        <a href="#destinos" class="btn btn-primary btn-lg px-4 py-2 rounded-pill">
+          <i class="bi bi-compass me-2"></i>Explorar Destinos
+        </a>
+        <a href="#contacto" class="btn btn-outline-light btn-lg px-4 py-2 rounded-pill">
+          <i class="bi bi-chat-dots me-2"></i>Contactar
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-indicator position-absolute bottom-0 start-50 translate-middle-x mb-4 animate-bounce">
+    <i class="bi bi-chevron-down fs-2 text-white"></i>
   </div>
 </section>
 
-<!--- Destacados --->
-<section class="container py-5">
-  <h2 class="text-center mb-5 fw-bold section-title">Destinos Destacados</h2>
+<!-- DESTINOS DESTACADOS -->
+<section id="destinos" class="container py-5">
+  <div class="text-center mb-5">
+    <h2 class="fw-bold section-title display-5" style="color: var(--text-color);">Destinos Destacados</h2>
+    <p class="fs-5" style="color: var(--text-color); opacity: 0.7;">Descubrí los rincones más mágicos de nuestra provincia</p>
+  </div>
+  
   <div class="row g-4">
+    <!-- Card 1: Puna -->
     <div class="col-md-3 col-sm-6">
-      <div class="card h-100 border-0 shadow-sm transition-base hover-zoom">
-        <img src="../archivos/img/home/puna.jpg" class="card-img-top" alt="puna">
-        <div class="card-body text-center">
-          <h3 class="h5 card-title mb-0">Puna</h3>
+      <div class="card h-100 border-0 transition-base hover-lift" style="background: transparent !important; backdrop-filter: blur(10px);">
+        <div class="card-img-wrapper position-relative overflow-hidden rounded-4">
+          <img src="../archivos/img/home/puna.jpg" class="card-img-top" alt="Puna" style="height: 220px; object-fit: cover;">
+          <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-40 d-flex align-items-center justify-content-center opacity-0 transition-base">
+            <i class="bi bi-search fs-1 text-white"></i>
+          </div>
+          <span class="badge bg-danger position-absolute top-0 end-0 m-2">Popular</span>
+        </div>
+        <div class="card-body text-center" style="background: rgba(var(--bg-color-rgb), 0.1); backdrop-filter: blur(10px); border-radius: 0 0 12px 12px;">
+          <div class="mb-2">
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-half text-warning"></i>
+            <span class="ms-1" style="color: var(--text-color); opacity: 0.7;">(128)</span>
+          </div>
+          <h3 class="h5 card-title fw-bold mb-2" style="color: var(--text-color);">Puna</h3>
+          <p class="small" style="color: var(--text-color); opacity: 0.7;">Alturas y paisajes únicos a más de 4000 msnm</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <span class="fw-bold" style="color: #ff9531;">Desde $45.000</span>
+            <button class="btn btn-outline-primary btn-sm rounded-pill btn-view-more" data-destino="Puna">
+              Ver más <i class="bi bi-arrow-right ms-1"></i>
+            </button>
+          </div>
         </div>
       </div>
     </div>
+    
+    <!-- Card 2: Quebrada -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card h-100 border-0 transition-base hover-lift" style="background: transparent !important; backdrop-filter: blur(10px);">
+        <div class="card-img-wrapper position-relative overflow-hidden rounded-4">
+          <img src="../archivos/img/home/quebrada.jpg" class="card-img-top" alt="Quebrada de Humahuaca" style="height: 220px; object-fit: cover;">
+          <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-40 d-flex align-items-center justify-content-center opacity-0 transition-base">
+            <i class="bi bi-search fs-1 text-white"></i>
+          </div>
+          <span class="badge bg-success position-absolute top-0 end-0 m-2">Patrimonio UNESCO</span>
+        </div>
+        <div class="card-body text-center" style="background: rgba(var(--bg-color-rgb), 0.1); backdrop-filter: blur(10px); border-radius: 0 0 12px 12px;">
+          <div class="mb-2">
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <span class="ms-1" style="color: var(--text-color); opacity: 0.7;">(256)</span>
+          </div>
+          <h3 class="h5 card-title fw-bold mb-2" style="color: var(--text-color);">Quebrada de Humahuaca</h3>
+          <p class="small" style="color: var(--text-color); opacity: 0.7;">Patrimonio de la Humanidad con cerros multicolores</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <span class="fw-bold" style="color: #ff9531;">Desde $38.000</span>
+            <button class="btn btn-outline-primary btn-sm rounded-pill btn-view-more" data-destino="Quebrada de Humahuaca">
+              Ver más <i class="bi bi-arrow-right ms-1"></i>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
-
-<!--- Contador --->
-<section class="py-5 bg-primary text-white text-center">
-  <div class="container">
-    <h2 class="display-4 fw-bold mb-0">Más de <span class="counter" data-target="500">0</span> visitantes</h2>
+    
+    <!-- Card 3: Valles -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card h-100 border-0 transition-base hover-lift" style="background: transparent !important; backdrop-filter: blur(10px);">
+        <div class="card-img-wrapper position-relative overflow-hidden rounded-4">
+          <img src="../archivos/img/home/valles.jpg" class="card-img-top" alt="Valles" style="height: 220px; object-fit: cover;">
+          <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-40 d-flex align-items-center justify-content-center opacity-0 transition-base">
+            <i class="bi bi-search fs-1 text-white"></i>
+          </div>
+        </div>
+        <div class="card-body text-center" style="background: rgba(var(--bg-color-rgb), 0.1); backdrop-filter: blur(10px); border-radius: 0 0 12px 12px;">
+          <div class="mb-2">
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star text-warning"></i>
+            <span class="ms-1" style="color: var(--text-color); opacity: 0.7;">(98)</span>
+          </div>
+          <h3 class="h5 card-title fw-bold mb-2" style="color: var(--text-color);">Valles</h3>
+          <p class="small" style="color: var(--text-color); opacity: 0.7;">Nuestros valles son hermosos con vegetación exuberante</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <span class="fw-bold" style="color: #ff9531;">Desde $32.000</span>
+            <button class="btn btn-outline-primary btn-sm rounded-pill btn-view-more" data-destino="Valles">
+              Ver más <i class="bi bi-arrow-right ms-1"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Card 4: Yungas -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card h-100 border-0 transition-base hover-lift" style="background: transparent !important; backdrop-filter: blur(10px);">
+        <div class="card-img-wrapper position-relative overflow-hidden rounded-4">
+          <img src="../archivos/img/home/yungas.jpg" class="card-img-top" alt="Yungas" style="height: 220px; object-fit: cover;">
+          <div class="card-overlay position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-40 d-flex align-items-center justify-content-center opacity-0 transition-base">
+            <i class="bi bi-search fs-1 text-white"></i>
+          </div>
+          <span class="badge bg-info position-absolute top-0 end-0 m-2">Aventura</span>
+        </div>
+        <div class="card-body text-center" style="background: rgba(var(--bg-color-rgb), 0.1); backdrop-filter: blur(10px); border-radius: 0 0 12px 12px;">
+          <div class="mb-2">
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-half text-warning"></i>
+            <span class="ms-1" style="color: var(--text-color); opacity: 0.7;">(203)</span>
+          </div>
+          <h3 class="h5 card-title fw-bold mb-2" style="color: var(--text-color);">Yungas</h3>
+          <p class="small" style="color: var(--text-color); opacity: 0.7;">Una experiencia inolvidable en la selva de montaña</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <span class="fw-bold" style="color: #ff9531;">Desde $52.000</span>
+            <button class="btn btn-outline-primary btn-sm rounded-pill btn-view-more" data-destino="Yungas">
+              Ver más <i class="bi bi-arrow-right ms-1"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!--- Carrusel --->
-<section class="py-5 bg-light-subtle">
-  <div class="container text-center">
-    <h2 class="mb-5 fw-bold section-title">Comentarios</h2>
+<!-- CONTADOR  -->
+<section class="py-5 text-white text-center position-relative overflow-hidden" style="background: linear-gradient(135deg, #ff9531 0%, #ff6b1a 100%);">
+  <div class="position-absolute top-0 start-0 w-100 h-100 opacity-10">
+    <i class="bi bi-map-fill display-1 position-absolute top-50 start-0 translate-middle-y"></i>
+    <i class="bi bi-people-fill display-1 position-absolute top-50 end-0 translate-middle-y"></i>
+  </div>
+  <div class="container position-relative">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="counter-card">
+          <i class="bi bi-people-fill display-4 mb-3"></i>
+          <h2 class="display-3 fw-bold mb-0"><span class="counter" data-target="15234">0</span></h2>
+          <p class="fs-5 mb-0">Visitantes Felices</p>
+          <small class="opacity-75">+ este año</small>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="counter-card">
+          <i class="bi bi-calendar-check-fill display-4 mb-3"></i>
+          <h2 class="display-3 fw-bold mb-0"><span class="counter" data-target="1250">0</span>+</h2>
+          <p class="fs-5 mb-0">Experiencias Guiadas</p>
+          <small class="opacity-75">con feedback 5 estrellas</small>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="counter-card">
+          <i class="bi bi-geo-alt-fill display-4 mb-3"></i>
+          <h2 class="display-3 fw-bold mb-0"><span class="counter" data-target="45">0</span></h2>
+          <p class="fs-5 mb-0">Destinos Exclusivos</p>
+          <small class="opacity-75">por toda la provincia</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CARRUSEL -->
+<section class="py-5" style="background: transparent;">
+  <div class="container">
+    <div class="text-center mb-5">
+      <i class="bi bi-chat-quote-fill display-1 opacity-25" style="color: var(--text-color);"></i>
+      <h2 class="fw-bold section-title" style="color: var(--text-color);">Lo que dicen nuestros viajeros</h2>
+      <p class="fs-5" style="color: var(--text-color); opacity: 0.7;">Más de 1000 testimonios reales de aventureros como vos</p>
+    </div>
+    
     <div id="carouselTestimonios" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselTestimonios" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Testimonio 1"></button>
+        <button type="button" data-bs-target="#carouselTestimonios" data-bs-slide-to="1" aria-label="Testimonio 2"></button>
+        <button type="button" data-bs-target="#carouselTestimonios" data-bs-slide-to="2" aria-label="Testimonio 3"></button>
+        <button type="button" data-bs-target="#carouselTestimonios" data-bs-slide-to="3" aria-label="Testimonio 4"></button>
+      </div>
+      
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <p class="fs-4 italic">"Muy cálida bienvenida de los jujeños"</p>
-          <p class="fw-bold">- Rocio F.</p>
+          <div class="testimonial-card text-center p-5 mx-auto" style="max-width: 700px; background: rgba(var(--bg-color-rgb), 0.15); backdrop-filter: blur(12px); border-radius: 24px; border: 1px solid rgba(255,255,255,0.1);">
+            <div class="avatar-wrapper mb-4">
+              <div class="avatar-circle bg-primary bg-opacity-10 d-inline-flex rounded-circle p-3" style="background: rgba(255,149,49,0.1);">
+                <i class="bi bi-person-circle fs-1" style="color: #ff9531;"></i>
+              </div>
+            </div>
+            <div class="stars mb-3">
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+            </div>
+            <p class="fs-4 fst-italic" style="color: var(--text-color);">"Muy cálida bienvenida de los jujeños, el paisaje de la Quebrada es algo que nunca voy a olvidar. Volveré sin duda!"</p>
+            <h5 class="fw-bold mt-3" style="color: var(--text-color);">Rocio Fernández</h5>
+            <p style="color: var(--text-color); opacity: 0.7;">Buenos Aires, Argentina</p>
+            <div class="verified-badge mt-2">
+              <i class="bi bi-patch-check-fill text-success"></i>
+              <small style="color: var(--text-color); opacity: 0.7;">Viaje verificado · Marzo 2024</small>
+            </div>
+          </div>
         </div>
+        
         <div class="carousel-item">
-          <p class="fs-4 italic">"Excelente la calidad del servicio de transporte"</p>
-          <p class="fw-bold">- Juan C.</p>
+          <div class="testimonial-card text-center p-5 mx-auto" style="max-width: 700px; background: rgba(var(--bg-color-rgb), 0.15); backdrop-filter: blur(12px); border-radius: 24px; border: 1px solid rgba(255,255,255,0.1);">
+            <div class="avatar-wrapper mb-4">
+              <div class="avatar-circle bg-success bg-opacity-10 d-inline-flex rounded-circle p-3" style="background: rgba(255,149,49,0.1);">
+                <i class="bi bi-person-circle fs-1" style="color: #ff9531;"></i>
+              </div>
+            </div>
+            <div class="stars mb-3">
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-half text-warning"></i>
+            </div>
+            <p class="fs-4 fst-italic" style="color: var(--text-color);">"Excelente la calidad del servicio de transporte y guías. Las Salinas Grandes superaron mis expectativas, un lugar mágico."</p>
+            <h5 class="fw-bold mt-3" style="color: var(--text-color);">Juan Carlos Méndez</h5>
+            <p style="color: var(--text-color); opacity: 0.7;">Córdoba, Argentina</p>
+            <div class="verified-badge mt-2">
+              <i class="bi bi-patch-check-fill text-success"></i>
+              <small style="color: var(--text-color); opacity: 0.7;">Viaje verificado · Enero 2024</small>
+            </div>
+          </div>
         </div>
+        
+        <div class="carousel-item">
+          <div class="testimonial-card text-center p-5 mx-auto" style="max-width: 700px; background: rgba(var(--bg-color-rgb), 0.15); backdrop-filter: blur(12px); border-radius: 24px; border: 1px solid rgba(255,255,255,0.1);">
+            <div class="avatar-wrapper mb-4">
+              <div class="avatar-circle bg-info bg-opacity-10 d-inline-flex rounded-circle p-3" style="background: rgba(255,149,49,0.1);">
+                <i class="bi bi-person-circle fs-1" style="color: #ff9531;"></i>
+              </div>
+            </div>
+            <div class="stars mb-3">
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+            </div>
+            <p class="fs-4 fst-italic" style="color: var(--text-color);">"Increíble experiencia en los Valles y Yungas. La organización fue impecable y el equipo muy profesional. 100% recomendable."</p>
+            <h5 class="fw-bold mt-3" style="color: var(--text-color);">Laura Martínez</h5>
+            <p style="color: var(--text-color); opacity: 0.7;">Santiago, Chile</p>
+            <div class="verified-badge mt-2">
+              <i class="bi bi-patch-check-fill text-success"></i>
+              <small style="color: var(--text-color); opacity: 0.7;">Viaje verificado · Febrero 2024</small>
+            </div>
+          </div>
         </div>
+        
+        <div class="carousel-item">
+          <div class="testimonial-card text-center p-5 mx-auto" style="max-width: 700px; background: rgba(var(--bg-color-rgb), 0.15); backdrop-filter: blur(12px); border-radius: 24px; border: 1px solid rgba(255,255,255,0.1);">
+            <div class="avatar-wrapper mb-4">
+              <div class="avatar-circle bg-warning bg-opacity-10 d-inline-flex rounded-circle p-3" style="background: rgba(255,149,49,0.1);">
+                <i class="bi bi-person-circle fs-1" style="color: #ff9531;"></i>
+              </div>
+            </div>
+            <div class="stars mb-3">
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+            </div>
+            <p class="fs-4 fst-italic" style="color: var(--text-color);">"La Puna es un destino único, me sentí en otro planeta. Los guías locales conocen cada rincón, una experiencia auténtica."</p>
+            <h5 class="fw-bold mt-3" style="color: var(--text-color);">Miguel Ángel Ruiz</h5>
+            <p style="color: var(--text-color); opacity: 0.7;">Lima, Perú</p>
+            <div class="verified-badge mt-2">
+              <i class="bi bi-patch-check-fill text-success"></i>
+              <small style="color: var(--text-color); opacity: 0.7;">Viaje verificado · Abril 2024</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimonios" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bg-primary rounded-circle p-3 shadow-sm" aria-hidden="true">
+          <i class="bi bi-chevron-left"></i>
+        </span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselTestimonios" data-bs-slide="next">
+        <span class="carousel-control-next-icon bg-primary rounded-circle p-3 shadow-sm" aria-hidden="true">
+          <i class="bi bi-chevron-right"></i>
+        </span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
     </div>
   </div>
 </section>
-  
-<!-- FOOTER -->
-<footer class="py-5">
+
+<!--- FOOTER --->
+<footer class="py-5 mt-4">
   <div class="container">
     <div class="row gy-4 align-items-center">
       <div class="col-md-6 text-center text-md-start">
-        <h3 class="fw-bold">Suscribite al newsletter</h3>
-        <form class="d-flex gap-2 mt-3 mb-4">
-          <input type="email" class="form-control" placeholder="Tu correo electrónico" required>
-          <button type="submit" class="btn btn-primary">Suscribirse</button>
+        <h3 class="fw-bold"><i class="bi bi-envelope-paper-fill me-2"></i> Suscribite al newsletter</h3>
+        
+        <form id="newsletterForm" class="d-flex flex-column flex-sm-row gap-2 mt-3 mb-4">
+          <div class="flex-grow-1">
+            <input type="email" id="emailInput" class="form-control" 
+                   placeholder="Tu correo electrónico" 
+                   required 
+                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+                   title="Ingresá un email válido (ej: nombre@dominio.com)">
+            <div id="emailFeedback" class="form-text text-danger small mt-1" style="display:none;">
+              <i class="bi bi-exclamation-triangle-fill me-1"></i>Correo inválido
+            </div>
+            <div id="sanitizeMsg" class="form-text text-success small mt-1" style="display:none;">
+              <i class="bi bi-check-circle-fill me-1"></i>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            <i class="bi bi-send-fill me-1"></i> Suscribirse
+          </button>
         </form>
-        <div class="d-flex gap-3 justify-content-center justify-content-md-start fs-4">
-          <a href="#" class="text-reset"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="text-reset"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="text-reset"><i class="bi bi-tiktok"></i></a>
+        
+        <div class="footer-social d-flex gap-3 justify-content-center justify-content-md-start mt-3">
+          <a href="https://facebook.com/jujuyviajes" target="_blank" rel="noopener noreferrer"
+             class="social-link" aria-label="Seguinos en Facebook" title="Facebook">
+            <div class="sprite-icon sprite-facebook"></div>
+          </a>
+          
+          <a href="https://instagram.com/jujuyviajes" target="_blank" rel="noopener noreferrer"
+             class="social-link" aria-label="Seguinos en Instagram" title="Instagram">
+            <div class="sprite-icon sprite-instagram"></div>
+          </a>
+          
+          <a href="https://wa.me/5493884000000" target="_blank" rel="noopener noreferrer"
+             class="social-link" aria-label="Contactanos por WhatsApp" title="WhatsApp">
+            <div class="sprite-icon sprite-whatsapp"></div>
+          </a>
+          
+          <a href="https://youtube.com/@jujuyviajes" target="_blank" rel="noopener noreferrer"
+             class="social-link" aria-label="Suscribite en YouTube" title="YouTube">
+            <div class="sprite-icon sprite-youtube"></div>
+          </a>
         </div>
+        <p class="small text-muted mt-3">
+          <i class="bi bi-image"></i> Iconos unificados en sprite CSS (background-position)
+        </p>
       </div>
       <div class="col-md-6">
         <div class="ratio ratio-16x9 rounded overflow-hidden shadow">
-          <iframe src="https://www.google.com.ar/maps/d/u/0/embed?mid=1WbCeuLtPgaIoTMBbMBepUsitzrJnUsHE" loading="lazy"></iframe>
+          <iframe src="https://www.google.com.ar/maps/d/u/0/embed?mid=1WbCeuLtPgaIoTMBbMBepUsitzrJnUsHE" 
+                  loading="lazy" 
+                  title="Mapa Jujuy"></iframe>
         </div>
       </div>
     </div>
   </div>
 </footer>
 
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../js/home.js" defer></script>
-  <script src="../js/index.js" defer></script>
-
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/home.js" defer></script>
+<script src="../js/index.js" defer></script>
 </body>
 </html>
