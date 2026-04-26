@@ -12,7 +12,7 @@
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  /*grid-template-columns: 1fr 1fr;*/
   gap: 1.2rem;
 }
 
@@ -103,19 +103,19 @@ p {
 }
 
 /* ===== MODAL & SIMULACIÓN DE CARGA ===== */
+/*
 .modal {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.8);
-  display: none; /* Oculto por defecto */
+  display: none; 
   justify-content: center;
   align-items: center;
   z-index: 1000;
   backdrop-filter: blur(5px);
-}
-
+}*/
 /* Se activa al hacer clic en el enlace del formulario */
-.modal:target {
+/*.modal:target {
   display: flex;
 }
 
@@ -126,10 +126,34 @@ p {
   max-width: 450px;
   position: relative;
   overflow: hidden;
+}*/
+
+/* Botón Cerrar (con tu estilo de gradiente naranja) */
+.btn-cerrar-modal {
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(135deg, #ff7a2c, #ff9a5a);
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(255, 122, 44, 0.3);
 }
 
+.btn-cerrar-modal:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 122, 44, 0.5);
+}
+
+.modal-content {
+  color: #000;
+} 
+
 /* Estilo del Spinner */
-.spinner {
+/*.spinner {
   width: 50px;
   height: 50px;
   border: 5px solid #ff9500;
@@ -138,8 +162,10 @@ p {
   margin: 0 auto 1.5rem;
   animation: spin 1s linear infinite, fadeOut 0.5s forwards 1.5s;
 }
+  */
 
 /* El mensaje aparece después de que el spinner desaparece */
+/*
 .mensaje-exito {
   opacity: 0;
   animation: fadeIn 0.5s forwards 1.8s;
@@ -155,4 +181,6 @@ p {
 
 @keyframes fadeIn {
   to { opacity: 1; }
-}
+} 
+
+*/

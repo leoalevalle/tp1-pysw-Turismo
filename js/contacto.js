@@ -43,4 +43,45 @@ $(document).ready(function() {
     }
   });
 
+
+
+
+$('#formContacto').on('submit', function(e) {
+  e.preventDefault();
+  
+  // Verificar campos inválidos
+  let invalidos = $('#nombre, #email, #telefono, #mensaje').filter(function() {
+    return $(this).hasClass('is-invalid') || $(this).val().trim() === '';
+  }).length;
+  
+  if (invalidos > 0) {
+    alert('Por favor, corrige los campos marcados en rojo.');
+    return;
+  }
+  
+  // Mostrar spinner
+  $('#btnTexto').addClass('d-none');           
+  $('#btnSpinner').removeClass('d-none');     
+  $('#btnEnviar').prop('disabled', true);      
+    
+  // Simular envío
+  setTimeout(function() {
+    
+    // Ocultar spinner
+    $('#btnTexto').removeClass('d-none');      
+    $('#btnSpinner').addClass('d-none');       
+    $('#btnEnviar').prop('disabled', false);   
+    
+    // Abrir modal
+    let modal = new bootstrap.Modal(document.getElementById('modalConfirmacion'));
+    modal.show();
+    
+    // Limpiar formulario
+    $('#formContacto')[0].reset();
+    $('#nombre, #email, #telefono, #mensaje').removeClass('is-valid is-invalid');
+    
+  }, 2000);
+  
+});
+
 });

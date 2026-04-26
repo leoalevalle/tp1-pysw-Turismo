@@ -50,44 +50,57 @@
 </header>
 
 <section class="contacto" id="seccion-contacto">
-  <h2>¿Tienes una duda?</h2>
-  <h2>¡Contáctanos!</h2>
+  <h2 class="fw-bold display-6 mb-0 text-center">¿Tienes una duda?</h2>
+  <h2 class="fw-bold display-5 text-warning text-center">¡Contáctanos!</h2>
 
-  <form id="formContacto" action="#modal-exito" class="form-contacto">
-    <div class="full">
+  <form id="formContacto"  class="form-contacto" >
+    <div class="row g-4 mb-3 ">
+    <div class="col-12 col-md-6">
       <label for="nombre">*Nombre:</label>
       <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Tu nombre" required />
     </div>
-    <div>
+    <br>
+    <div class="col-12 col-md-6">
       <label for="email">*Correo:</label>
       <input type="email" id="email" name="email" class="form-control" placeholder="email@ejemplo.com" required />
     </div>
-    <div>
+    </div>
+    <div class="row g-4 mb-3" >
+    <div class="col-12 col-md-6">
       <label for="telefono">*Teléfono:</label>
       <input type="tel" id="telefono" name="telefono" class="form-control" placeholder="Solo números" required />
     </div>
-    <div class="full">
+    <div class="col-12 col-md-6">
       <label for="mensaje">*Mensaje:</label>
       <textarea id="mensaje" name="mensaje" class="form-control" placeholder="Escribe tu consulta aquí..." required></textarea>
     </div>
-    
-     <div class="full">
-    <button type="submit" class="btn-enviar">Enviar mensaje</button>
+    </div>
+  <div class="col-12">
+    <button type="submit" class="btn-enviar">
+      <span id="btnTexto">Enviar mensaje</span>
+      <span id="btnSpinner" class="spinner-border spinner-border-sm d-none" role="status">
+    </button>
   </div>
 
   <p class="full"><em>*Todos los campos son obligatorios*</em></p>
 </form>
 
-  <div id="modal-exito" class="modal">
-    <div class="modal-content">
-      <div class="spinner"></div>
-      <div class="mensaje-exito">
+<!-- MODAL -->
+<div class="modal fade" id="modalConfirmacion" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center p-4">
+      <div class="modal-body">
         <h3>¡Mensaje enviado con éxito!</h3>
-        <p>Gracias por contactarnos. Te responderemos a la brevedad.</p>
-        <a href="#seccion-contacto" class="btn-cerrar">Cerrar</a>
+        <p>Gracias por contactarnos.</p>
+        <button type="button" class="btn-cerrar-modal" data-bs-dismiss="modal">
+          Cerrar
+        </button>
+
       </div>
     </div>
   </div>
+</div>
+
 </section>
 
 <!-- FOOTER -->
