@@ -1,87 +1,33 @@
-/* Contenedor Principal */
+
 .contenedor-precios {
-    padding: 40px 5%;
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: center;
+    max-width: 1000px; 
 }
 
-/* Estilos de la Tabla */
-.tabla-precios {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    overflow: hidden;
-}
 
-.tabla-precios th, .tabla-precios td {
-    padding: 15px;
-    border-bottom: 1px solid #eee;
-    text-align: left;
-}
-
-.tabla-precios th {
-    background-color: #d35400;
-    color: white;
+#tabla-destinos thead th {
+    background-color: #d35400 !important; /* !important asegura que sobreescriba a Bootstrap */
+    color: white !important;
     text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: none;
 }
 
-/* EFECTO DE RESALTADO AL PASAR EL CURSOR */
-.tabla-precios tbody tr:hover {
-    background-color: #ffc08c;
-    transform: scale(1.01);
-    transition: all 0.2s ease-in-out;
+
+#tabla-destinos tbody tr {
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.dark-mode .tabla-precios tbody tr:hover {
-  background-color: #cd5911;
-}
-
-/* ESTILOS DEL TOOLTIP */
-.tooltip-container {
+#tabla-destinos tbody tr:hover {
+    transform: scale(1.015); /* Efecto de acercamiento */
+    background-color: #ffc08c !important; /* Tu naranja claro original */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     position: relative;
-    cursor: help;
-    color: #2980b9;
-    font-weight: bold;
-    text-decoration: underline;
+    z-index: 10; /* Evita que la sombra quede por debajo de las otras filas */
 }
 
-.tooltip-text {
-    visibility: hidden;
-    width: 220px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 10px;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -110px;
-    opacity: 0;
-    transition: opacity 0.3s;
-    font-size: 0.85rem;
-    font-weight: normal;
-    line-height: 1.4;
+/* 4. Soporte para Dark Mode */
+.dark-mode #tabla-destinos tbody tr:hover {
+    background-color: #cd5911 !important; /* Tu naranja oscuro para modo noche */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
 }
 
-/* Flechita del tooltip */
-.tooltip-text::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #333 transparent transparent transparent;
-}
-
-/* Mostrar el tooltip al hacer hover */
-.tooltip-container:hover .tooltip-text {
-    visibility: visible;
-    opacity: 1;
-}
