@@ -13,7 +13,7 @@
     margin-top: 20px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     border-radius: 8px;
-    overflow: hidden; /* Para que los bordes redondeados funcionen */
+    overflow: hidden;
 }
 
 .tabla-precios th, .tabla-precios td {
@@ -23,23 +23,23 @@
 }
 
 .tabla-precios th {
-    background-color: #d35400; /* Naranja Jujuy */
+    background-color: #d35400;
     color: white;
     text-transform: uppercase;
 }
 
 /* EFECTO DE RESALTADO AL PASAR EL CURSOR */
 .tabla-precios tbody tr:hover {
-    background-color: #ffc08c; /* Un tono naranja muy suave */
+    background-color: #ffc08c;
     transform: scale(1.01);
     transition: all 0.2s ease-in-out;
 }
 
 .dark-mode .tabla-precios tbody tr:hover {
-  background-color: #cd5911; /* naranja más oscuro */
+  background-color: #cd5911;
 }
 
-/* ESTILOS DEL TOOLTIP (SIN JS) */
+/* ESTILOS DEL TOOLTIP */
 .tooltip-container {
     position: relative;
     cursor: help;
@@ -58,7 +58,7 @@
     padding: 10px;
     position: absolute;
     z-index: 1;
-    bottom: 125%; /* Aparece arriba del texto */
+    bottom: 125%;
     left: 50%;
     margin-left: -110px;
     opacity: 0;

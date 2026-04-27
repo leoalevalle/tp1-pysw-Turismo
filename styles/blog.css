@@ -1,0 +1,163 @@
+/* Grid estilo revista */
+  .grid-magazine {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .post-featured {
+    grid-column: span 2;
+  }
+  
+  .post {
+    background: rgba(var(--bg-color-rgb), 0.08);
+    backdrop-filter: blur(8px);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    background: rgba(var(--bg-color-rgb), 0.12);
+  }
+  
+  .post-img {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .post-img img {
+    transition: transform 0.5s ease;
+  }
+  
+  .post:hover .post-img img {
+    transform: scale(1.05);
+  }
+  
+  .post-overlay {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ff9531;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .post:hover .post-overlay {
+    opacity: 1;
+  }
+  
+  .tag {
+    background: #ff9531;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  
+  /* Botones de filtro */
+  .filter-btn {
+    background: rgba(var(--bg-color-rgb), 0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 24px;
+    border-radius: 50px;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .filter-btn:hover {
+    background: #ff9531;
+    color: white;
+    border-color: #ff9531;
+    transform: translateY(-2px);
+  }
+  
+  .filter-btn.active {
+    background: #ff9531;
+    color: white;
+    border-color: #ff9531;
+  }
+  
+  /* Animaciones al hacer scroll */
+  .post {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+  }
+  
+  .post.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Efecto glass para comentarios */
+  .comment {
+    transition: all 0.3s ease;
+  }
+  
+  .comment:hover {
+    background: rgba(var(--bg-color-rgb), 0.15) !important;
+    transform: translateX(5px);
+  }
+  
+  /* Responsive */
+  @media (max-width: 992px) {
+    .grid-magazine {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .post-featured {
+      grid-column: span 2;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .grid-magazine {
+      grid-template-columns: 1fr;
+    }
+    .post-featured {
+      grid-column: span 1;
+    }
+  }
+  
+  /* Estilos para inputs en modo oscuro */
+  [data-theme="dark"] .form-control {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    color: #f8f9fa !important;
+  }
+  
+  [data-theme="dark"] .form-control:focus {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-color: #ff9531 !important;
+    box-shadow: 0 0 0 0.2rem rgba(255, 149, 49, 0.25);
+  }
+  
+  [data-theme="light"] .form-control {
+    background: rgba(0, 0, 0, 0.02) !important;
+    border-color: rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  .comment-actions i {
+    transition: color 0.3s ease;
+  }
+  
+  .comment-actions i:hover {
+    color: #ff9531;
+    cursor: pointer;
+  }

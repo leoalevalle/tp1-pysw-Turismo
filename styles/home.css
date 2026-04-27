@@ -1,162 +1,160 @@
-/* HERO SECTION */
-.hero {
-  position: relative;
-  height: 60vh;
-  overflow: hidden;
-}
-
-.video-bg {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  z-index: -1;
-}
-
-.video-bg iframe {
-  width: 100vw; height: 100vh;
-  pointer-events: none;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-}
-
-/* Animación del Texto */
-.overlay-texto h2 {
-  font-size: 4rem;
-  margin: 0;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  animation: slideDown 1.2s ease-out forwards;
-  opacity: 0;
-}
-
-.overlay-texto p {
-  font-size: 1.5rem;
-  margin-top: 10px;
-  animation: fadeIn 2s ease-in forwards;
-  animation-delay: 0.5s;
-  opacity: 0;
-}
-
-/* Keyframes de las Animaciones */
-@keyframes slideDown {
-  from {
-    transform: translateY(-50px);
-    opacity: 0;
+  :root {
+    --bg-color-rgb: 255, 255, 255;
   }
-  to {
-    transform: translateY(0);
-    opacity: 1;
+  
+  [data-theme="dark"] {
+    --bg-color-rgb: 18, 18, 18;
   }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .overlay-texto h2 { font-size: 2.5rem; }
-  .overlay-texto p { font-size: 1.1rem; }
-}
-
-/* DESTINOS (CARDS) */
-.clases-destacadas {
-  text-align: center;
-  padding: 4rem 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.clases-destacadas .cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5rem;
-  justify-content: center;
-}
-
-.card {
-  background-color: var(--card-bg);
-  color: var(--text-color);
-  border-radius: 8px;
-  width: 320px;
-  transition: transform 0.3s;
-  overflow: hidden;
-}
-
-.card:hover { transform: scale(1.1); }
-.card img { width: 100%; height: 180px; object-fit: cover; }
-
-/* CONTADOR ANIMADO */
-
-.counter::after {
-  content: "0";
-  animation: contar 3s forwards ease-in-out;
-}
-
-@keyframes contar {
-  0% { content: "100"; }
-  25% { content: "200"; }
-  50% { content: "300"; }
-  75% { content: "400"; }
-  100% { content: "500"; }
-}
-
-.contador {
-  background-color: var(--card-bg);
-  padding: 2rem 0;
-  text-align: center;
-}
-
-.counter {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #ff0000;
-}
-
-/* TESTIMONIOS (SLIDER) */
-.carrusel-slider {
-  position: relative;
-  width: 100%;
-  max-width: 500px;
-  height: 120px;
-  margin: auto;
-  overflow: hidden;
-}
-
-.testimonio {
-  position: absolute;
-  width: 100%;
-  opacity: 0;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  animation: slideFade 25s infinite;
-}
-
-@keyframes slideFade {
-  0%   { opacity: 0; transform: translateX(-100%); }
-  5%   { opacity: 1; transform: translateX(0); }
-  20%  { opacity: 1; transform: translateX(0); }
-  25%  { opacity: 0; transform: translateX(100%); }
-  100% { opacity: 0; transform: translateX(100%); }
-}
-
-/* Escalonar cada testimonio */
-.testimonio:nth-child(1) { animation-delay: 0s; }
-.testimonio:nth-child(2) { animation-delay: 5s; }
-.testimonio:nth-child(3) { animation-delay: 10s; }
-.testimonio:nth-child(4) { animation-delay: 15s; }
-.testimonio:nth-child(5) { animation-delay: 20s; }
+  
+  .hero-content {
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-badge {
+    animation: slideInDown 0.6s ease-out;
+  }
+  
+  @keyframes slideInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-buttons {
+    animation: fadeIn 1s ease-out 0.5s both;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .animate-bounce {
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-20px); }
+    60% { transform: translateY(-10px); }
+  }
+  
+  /* Hover cards*/
+  .hover-lift {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-10px);
+  }
+  
+  .card-img-wrapper {
+    border-radius: 16px 16px 0 0;
+    overflow: hidden;
+  }
+  
+  .card-overlay {
+    transition: opacity 0.3s ease;
+    border-radius: 16px 16px 0 0;
+  }
+  
+  .card-img-wrapper:hover .card-overlay {
+    opacity: 1 !important;
+  }
+  
+  .btn-view-more {
+    transition: all 0.3s ease;
+  }
+  
+  .btn-view-more:hover {
+    transform: translateX(5px);
+  }
+  
+  /* contador */
+  .counter-card {
+    transition: transform 0.3s ease;
+  }
+  
+  .counter-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Carrusel */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    transition: all 0.3s ease;
+    background-size: 50%;
+  }
+  
+  .carousel-control-prev-icon:hover,
+  .carousel-control-next-icon:hover {
+    transform: scale(1.1);
+    background-color: #ff6b1a !important;
+  }
+  
+  .testimonial-card {
+    transition: transform 0.3s ease;
+  }
+  
+  .testimonial-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .avatar-circle {
+    width: 80px;
+    height: 80px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .stars i {
+    font-size: 1.2rem;
+    margin: 0 2px;
+  }
+  
+  .section-title {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .section-title:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: #ff9531;
+    border-radius: 2px;
+  }
+  
+  [data-theme="dark"] .bg-primary.bg-opacity-10 {
+    background: rgba(255, 149, 49, 0.15) !important;
+  }
+  
+  [data-theme="dark"] .testimonial-card {
+    border-color: rgba(255, 255, 255, 0.05) !important;
+  }

@@ -4,35 +4,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inicio</title>
+  <title>Agencias</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="../styles/main.css">
   <link rel="stylesheet" href="../styles/agencias.css">
 </head>
 <body>
 
-  
-  <header>
-    <nav class="mega-menu">
-        <div class="logo">
-        <img src="../archivos/img/logoJujuy.jpg" alt="Logo Jujuy" class="logo">
-      <h1>Jujuy Viajes</h1>
-        </div>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li class="has-submenu">
-          <a href="#">Destinos</a>
-          <div class="submenu">
-            <a href="destinos.html">Destinos</a>
-            <a href="blogDestinos.html">Blog</a>
-          </div>
-        </li>
-        <li><a href="agencias.html">Agencias</a></li>
-        <li><a href="precios.html">Precios</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-        <button id="modo-toggle" aria-label="Alternar Modo Oscuro 🌙">🌙</button>
-      </ul>
-    </nav>
-  </header>
+<!-- HEADER -->
+<header>
+  <nav class="navbar navbar-expand-lg fixed-top transition-base shadow-sm">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="../archivos/img/logoJujuy.jpg" alt="Logo Jujuy" width="40" height="40" class="me-2 rounded">
+        <span class="h4 mb-0 fw-bold"><i class="bi bi-geo-alt-fill me-1"></i> Jujuy Viajes</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door me-1"></i>Inicio</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"><i class="bi bi-map me-1"></i>Destinos</a>
+            <ul class="dropdown-menu shadow border-0">
+              <li><a class="dropdown-item" href="destinos.html"><i class="bi bi-binoculars me-2"></i>Ver Destinos</a></li>
+              <li><a class="dropdown-item" href="blogDestinos.html"><i class="bi bi-journal-bookmark-fill me-2"></i>Blog de Viajes</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="agencias.html"><i class="bi bi-building me-1"></i>Agencias</a></li>
+          <li class="nav-item"><a class="nav-link" href="precios.html"><i class="bi bi-tags me-1"></i>Precios</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html"><i class="bi bi-envelope-paper me-1"></i>Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="pishing.html"><i class="bi bi-envelope-paper me-1"></i>Phishing</a></li>
+          <li class="nav-item ms-lg-3">
+            <button id="btn-theme" class="btn btn-outline-secondary rounded-circle">
+              <i id="theme-icon" class="bi bi-moon-fill"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
     <main class="main-content">
         <section class="agencias-container">
             <h2>Agencias de Viajes en Jujuy</h2>
@@ -50,17 +65,15 @@
                             <div class="agencia-card-back">
                                 <h4>Aventura Jujuy</h4>
                                 <p>Ofrecemos excursiones a la Puna, Salinas Grandes y más.</p>
+                                <div class="rating">
+                                    <input type="radio" id="star5-1" name="rating-1" value="5"><label for="star5-1">★</label>
+                                    <input type="radio" id="star4-1" name="rating-1" value="4"><label for="star4-1">★</label>
+                                    <input type="radio" id="star3-1" name="rating-1" value="3"><label for="star3-1">★</label>
+                                    <input type="radio" id="star2-1" name="rating-1" value="2"><label for="star2-1">★</label>
+                                    <input type="radio" id="star1-1" name="rating-1" value="1"><label for="star1-1">★</label>
+                                </div>
+                                <button class="btn-contacto">Contactar</button>
                             </div>
-
-                            <div class="rating">
-                                <input type="radio" id="star5-1" name="rating-1" value="5"><label for="star5-1">★</label>
-                                <input type="radio" id="star4-1" name="rating-1" value="4"><label for="star4-1">★</label>
-                                <input type="radio" id="star3-1" name="rating-1" value="3"><label for="star3-1">★</label>
-                                <input type="radio" id="star2-1" name="rating-1" value="2"><label for="star2-1">★</label>
-                                <input type="radio" id="star1-1" name="rating-1" value="1"><label for="star1-1">★</label>
-                            </div>
-
-                            <button class="btn-contacto">Contactar</button>
                         </div>
                     </div>
 
@@ -76,17 +89,15 @@
                             <div class="agencia-card-back">
                                 <h4>Jujuy Tur</h4>
                                 <p>Ofrecemos excursiones a los principales destinos turísticos de la provincia.</p>
+                                <div class="rating">
+                                    <input type="radio" id="star5-2" name="rating-2" value="5"><label for="star5-2">★</label>
+                                    <input type="radio" id="star4-2" name="rating-2" value="4"><label for="star4-2">★</label>
+                                    <input type="radio" id="star3-2" name="rating-2" value="3"><label for="star3-2">★</label>
+                                    <input type="radio" id="star2-2" name="rating-2" value="2"><label for="star2-2">★</label>
+                                    <input type="radio" id="star1-2" name="rating-2" value="1"><label for="star1-2">★</label>
+                                </div>
+                                <button class="btn-contacto">Contactar</button>
                             </div>
-
-                            <div class="rating">
-                                <input type="radio" id="star5-2" name="rating-2" value="5"><label for="star5-2">★</label>
-                                <input type="radio" id="star4-2" name="rating-2" value="4"><label for="star4-2">★</label>
-                                <input type="radio" id="star3-2" name="rating-2" value="3"><label for="star3-2">★</label>
-                                <input type="radio" id="star2-2" name="rating-2" value="2"><label for="star2-2">★</label>
-                                <input type="radio" id="star1-2" name="rating-2" value="1"><label for="star1-2">★</label>
-                            </div>
-
-                            <button class="btn-contacto">Contactar</button>
                         </div>
                     </div>
 
@@ -102,17 +113,15 @@
                             <div class="agencia-card-back">
                                 <h4>Jujuy Urbano</h4>
                                 <p>Ofrecemos excursiones al casco histórico de Jujuy y más.</p>
+                                <div class="rating">
+                                    <input type="radio" id="star5-3" name="rating-3" value="5"><label for="star5-3">★</label>
+                                    <input type="radio" id="star4-3" name="rating-3" value="4"><label for="star4-3">★</label>
+                                    <input type="radio" id="star3-3" name="rating-3" value="3"><label for="star3-3">★</label>
+                                    <input type="radio" id="star2-3" name="rating-3" value="2"><label for="star2-3">★</label>
+                                    <input type="radio" id="star1-3" name="rating-3" value="1"><label for="star1-3">★</label>
+                                </div>
+                                <button class="btn-contacto">Contactar</button>
                             </div>
-
-                            <div class="rating">
-                                <input type="radio" id="star5-3" name="rating-3" value="5"><label for="star5-3">★</label>
-                                <input type="radio" id="star4-3" name="rating-3" value="4"><label for="star4-3">★</label>
-                                <input type="radio" id="star3-3" name="rating-3" value="3"><label for="star3-3">★</label>
-                                <input type="radio" id="star2-3" name="rating-3" value="2"><label for="star2-3">★</label>
-                                <input type="radio" id="star1-3" name="rating-3" value="1"><label for="star1-3">★</label>
-                            </div>
-
-                            <button class="btn-contacto">Contactar</button>
                         </div>
                     </div>
 
@@ -128,44 +137,86 @@
                             <div class="agencia-card-back">
                                 <h4>NOA Turismo</h4>
                                 <p>Ofrecemos excursiones a la Puna, Salinas Grandes y más.</p>
+                                <div class="rating">
+                                    <input type="radio" id="star5-4" name="rating-4" value="5"><label for="star5-4">★</label>
+                                    <input type="radio" id="star4-4" name="rating-4" value="4"><label for="star4-4">★</label>
+                                    <input type="radio" id="star3-4" name="rating-4" value="3"><label for="star3-4">★</label>
+                                    <input type="radio" id="star2-4" name="rating-4" value="2"><label for="star2-4">★</label>
+                                    <input type="radio" id="star1-4" name="rating-4" value="1"><label for="star1-4">★</label>
+                                </div>
+                                <button class="btn-contacto">Contactar</button>
                             </div>
-
-                            <div class="rating">
-                                <input type="radio" id="star5-4" name="rating-4" value="5"><label for="star5-4">★</label>
-                                <input type="radio" id="star4-4" name="rating-4" value="4"><label for="star4-4">★</label>
-                                <input type="radio" id="star3-4" name="rating-4" value="3"><label for="star3-4">★</label>
-                                <input type="radio" id="star2-4" name="rating-4" value="2"><label for="star2-4">★</label>
-                                <input type="radio" id="star1-4" name="rating-4" value="1"><label for="star1-4">★</label>
-                            </div>
-
-                            <button class="btn-contacto">Contactar</button>
                         </div>
                     </div>
                 </div>
             </section>
     </main>
 
-    <footer>
-    <div class="newsletter">
-      <h3>Suscribite al newsletter</h3>
-      <form  >
-        <input type="email" placeholder="Tu correo electrónico" required>
-        <button type="submit" class="button">Suscribirse</button>
-      </form>
-      <div class="redes">
-        <a href="https://www.facebook.com/"><img src="../archivos/icons/Facebook.svg" alt="Facebook"></a>
-        <a href="https://www.instagram.com/"><img src="../archivos/icons/Instagram.svg" alt="Instagram"></a>
-        <a href="https://www.tiktok.com/"><img src="../archivos/icons/tiktok.png" alt="Tiktok"></a>
+<!--- FOOTER --->
+<footer class="py-5 mt-4">
+  <div class="container">
+    <div class="row gy-4 align-items-center">
+      <div class="col-md-6 text-center text-md-start">
+        <h3 class="fw-bold"><i class="bi bi-envelope-paper-fill me-2"></i> Suscribite al newsletter</h3>
+        
+        <form id="newsletterForm" class="d-flex flex-column flex-sm-row gap-2 mt-3 mb-4">
+          <div class="flex-grow-1">
+            <input type="email" id="emailInput" class="form-control" 
+                   placeholder="Tu correo electrónico" 
+                   required 
+                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+                   title="Ingresá un email válido (ej: nombre@dominio.com)">
+            <div id="emailFeedback" class="form-text text-danger small mt-1" style="display:none;">
+              <i class="bi bi-exclamation-triangle-fill me-1"></i>Correo inválido
+            </div>
+            <div id="sanitizeMsg" class="form-text text-success small mt-1" style="display:none;">
+              <i class="bi bi-check-circle-fill me-1"></i>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            <i class="bi bi-send-fill me-1"></i> Suscribirse
+          </button>
+        </form>
+        
+        <div class="footer-social d-flex gap-3 justify-content-center justify-content-md-start mt-3">
+          <a href="https://facebook.com/jujuyviajes" target="_blank" rel="noopener noreferrer"
+             class="social-link" aria-label="Seguinos en Facebook" title="Facebook">
+            <div class="sprite-icon sprite-facebook"></div>
+          </a>
+          
+          <a href="https://instagram.com/jujuyviajes" target="_blank" rel="noopener noreferrer"
+             class="social-link" aria-label="Seguinos en Instagram" title="Instagram">
+            <div class="sprite-icon sprite-instagram"></div>
+          </a>
+          
+          <a href="https://wa.me/5493884000000" target="_blank" rel="noopener noreferrer"
+             class="social-link" aria-label="Contactanos por WhatsApp" title="WhatsApp">
+            <div class="sprite-icon sprite-whatsapp"></div>
+          </a>
+          
+          <a href="https://youtube.com/@jujuyviajes" target="_blank" rel="noopener noreferrer"
+             class="social-link" aria-label="Suscribite en YouTube" title="YouTube">
+            <div class="sprite-icon sprite-youtube"></div>
+          </a>
+        </div>
+        <p class="small text-muted mt-3">
+          <i class="bi bi-image"></i> Iconos unificados en sprite CSS (background-position)
+        </p>
+      </div>
+      <div class="col-md-6">
+        <div class="ratio ratio-16x9 rounded overflow-hidden shadow">
+          <iframe src="https://www.google.com.ar/maps/d/u/0/embed?mid=1WbCeuLtPgaIoTMBbMBepUsitzrJnUsHE" 
+                  loading="lazy" 
+                  title="Mapa Jujuy"></iframe>
+        </div>
       </div>
     </div>
-    <div class="mapa">
-        <iframe 
-        src="https://www.google.com.ar/maps/d/u/0/embed?mid=1WbCeuLtPgaIoTMBbMBepUsitzrJnUsHE"  
-        loading="lazy">
-        </iframe>
-    </div>
-  </footer>
-  <script src="../js/home.js" defer></script>
+  </div>
+</footer>
 
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/home.js" defer></script>
+<script src="../js/index.js" defer></script>
 </body>
 </html>

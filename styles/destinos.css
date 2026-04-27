@@ -1,11 +1,9 @@
-body {
-    padding: 20px;
-}
-
+/* TITULO */
 h2 {
     margin-bottom: 20px;
 }
 
+/* BOTONES DE FILTRO */
 .btn-filtro {
     margin-right: 10px;
     margin-bottom: 10px;
@@ -16,7 +14,7 @@ h2 {
     transform: scale(1.05);
 }
 
-
+/* CARDS */
 .card {
     position: relative;
     overflow: hidden;
@@ -24,19 +22,19 @@ h2 {
     border-radius: 10px;
 }
 
-
+/* IMAGEN */
 .card img {
     height: 200px;
     object-fit: cover;
     border-radius: 10px;
 }
 
-
+/* HOVER */
 .card:hover {
     transform: scale(1.05);
 }
 
-
+/* OVERLAY */
 .card::after {
     content: "Ver más";
     position: absolute;
@@ -54,12 +52,12 @@ h2 {
     opacity: 1;
 }
 
-
+/* TABLA */
 table {
     margin-top: 20px;
 }
 
-
+/* RESPONSIVE */
 @media (max-width: 600px) {
     .card img {
         height: 180px;

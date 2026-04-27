@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="../styles/contacto.css">
+</head>
+<body>
+
+
+
+<!-- HEADER -->
+<header>
+  <nav class="navbar navbar-expand-lg fixed-top transition-base shadow-sm">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="../archivos/img/logoJujuy.jpg" alt="Logo Jujuy" width="40" height="40" class="me-2 rounded">
+        <span class="h4 mb-0 fw-bold"><i class="bi bi-geo-alt-fill me-1"></i> Jujuy Viajes</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door me-1"></i>Inicio</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"><i class="bi bi-map me-1"></i>Destinos</a>
+            <ul class="dropdown-menu shadow border-0">
+              <li><a class="dropdown-item" href="destinos.html"><i class="bi bi-binoculars me-2"></i>Ver Destinos</a></li>
+              <li><a class="dropdown-item" href="blogDestinos.html"><i class="bi bi-journal-bookmark-fill me-2"></i>Blog de Viajes</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="agencias.html"><i class="bi bi-building me-1"></i>Agencias</a></li>
+          <li class="nav-item"><a class="nav-link" href="precios.html"><i class="bi bi-tags me-1"></i>Precios</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html"><i class="bi bi-envelope-paper me-1"></i>Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="pishing.html"><i class="bi bi-envelope-paper me-1"></i>Phishing</a></li>
+          <li class="nav-item ms-lg-3">
+            <button id="btn-theme" class="btn btn-outline-secondary rounded-circle">
+              <i id="theme-icon" class="bi bi-moon-fill"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="contacto" id="seccion-contacto">
+  <h2 class="fw-bold display-6 mb-0 text-center">¿Tienes una duda?</h2>
+  <h2 class="fw-bold display-5 text-warning text-center">¡Contáctanos!</h2>
+
+  <form id="formContacto"  class="form-contacto" >
+    <div class="row g-4 mb-3 ">
+    <div class="col-12 col-md-6">
+      <label for="nombre">*Nombre:</label>
+      <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Tu nombre" required />
+    </div>
+    <br>
+    <div class="col-12 col-md-6">
+      <label for="email">*Correo:</label>
+      <input type="email" id="email" name="email" class="form-control" placeholder="email@ejemplo.com" required />
+    </div>
+    </div>
+    <div class="row g-4 mb-3" >
+    <div class="col-12 col-md-6">
+      <label for="telefono">*Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono" class="form-control" placeholder="Solo números" required />
+    </div>
+    <div class="col-12 col-md-6">
+      <label for="mensaje">*Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" class="form-control" placeholder="Escribe tu consulta aquí..." required></textarea>
+    </div>
+    </div>
+  <div class="col-12">
+    <button type="submit" class="btn-enviar">
+      <span id="btnTexto">Enviar mensaje</span>
+      <span id="btnSpinner" class="spinner-border spinner-border-sm d-none" role="status">
+    </button>
+  </div>
+
+  <p class="full"><em>*Todos los campos son obligatorios*</em></p>
+</form>
+
+<!-- MODAL -->
+<div class="modal fade" id="modalConfirmacion" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center p-4">
+      <div class="modal-body">
+        <h3>¡Mensaje enviado con éxito!</h3>
+        <p>Gracias por contactarnos.</p>
+        <button type="button" class="btn-cerrar-modal" data-bs-dismiss="modal">
+          Cerrar
+        </button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+</section>
+
+<!--- FOOTER --->
+<footer class="py-5 mt-4">
+  <div class="container">
+    <div class="row gy-4 align-items-center">
+      <div class="col-md-6 text-center text-md-start">
+        <h3 class="fw-bold"><i class="bi bi-envelope-paper-fill me-2"></i> Suscribite al newsletter</h3>
+        
+        <form id="newsletterForm" class="d-flex flex-column flex-sm-row gap-2 mt-3 mb-4">
+          <div class="flex-grow-1">
+            <input type="email" id="emailInput" class="form-control" 
+                   placeholder="Tu correo electrónico" 
+                   required 
+                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+                   title="Ingresá un email válido (ej: nombre@dominio.com)">
+            <div id="emailFeedback" class="form-text text-danger small mt-1" style="display:none;">
+              <i class="bi bi-exclamation-triangle-fill me-1"></i>Correo inválido
+            </div>
+            <div id="sanitizeMsg" class="form-text text-success small mt-1" style="display:none;">
+              <i class="bi bi-check-circle-fill me-1"></i>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            <i class="bi bi-send-fill me-1"></i> Suscribirse
+          </button>
+        </form>
+        
+        <div class="footer-social d-flex gap-3 justify-content-center justify-content-md-start mt-3">
+          <a href="https://facebook.com/jujuyviajes" target="_blank" rel="noopener noreferrer"
+             class="social-link" aria-label="Seguinos en Facebook" title="Facebook">
+            <div class="sprite-icon sprite-facebook"></div>
+          </a>
+          
+          <a href="https://instagram.com/jujuyviajes" target="_blank" rel="noopener noreferrer"
+             class="social-link" aria-label="Seguinos en Instagram" title="Instagram">
+            <div class="sprite-icon sprite-instagram"></div>
+          </a>
+          
+          <a href="https://wa.me/5493884000000" target="_blank" rel="noopener noreferrer"
+             class="social-link" aria-label="Contactanos por WhatsApp" title="WhatsApp">
+            <div class="sprite-icon sprite-whatsapp"></div>
+          </a>
+          
+          <a href="https://youtube.com/@jujuyviajes" target="_blank" rel="noopener noreferrer"
+             class="social-link" aria-label="Suscribite en YouTube" title="YouTube">
+            <div class="sprite-icon sprite-youtube"></div>
+          </a>
+        </div>
+        <p class="small text-muted mt-3">
+          <i class="bi bi-image"></i> Iconos unificados en sprite CSS (background-position)
+        </p>
+      </div>
+      <div class="col-md-6">
+        <div class="ratio ratio-16x9 rounded overflow-hidden shadow">
+          <iframe src="https://www.google.com.ar/maps/d/u/0/embed?mid=1WbCeuLtPgaIoTMBbMBepUsitzrJnUsHE" 
+                  loading="lazy" 
+                  title="Mapa Jujuy"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/home.js" defer></script>
+  <script src="../js/contacto.js"></script>
+
+</body>
+</html>
