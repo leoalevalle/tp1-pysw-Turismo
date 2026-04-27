@@ -6,64 +6,37 @@ h2 {
     margin-bottom: 20px;
 }
 
-input[type="radio"] {
-    display: none;
-}
-
-.filtros label {
+.btn-filtro {
     margin-right: 10px;
-    cursor: pointer;
-    padding: 5px 10px;
-    background: #eee;
-    border-radius: 5px;
-}
-
-/* ACTIVO */
-.filtros input:checked + label {
-    background: #0077ff;
-    color: white;
-}
-
-/* GRID */
-.galeria {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 10px;
-}
-
-/* CARDS */
-.card {
-    position: relative;
-    overflow: hidden;
-    height: 200px;
+    margin-bottom: 10px;
     transition: 0.3s;
 }
 
-/* MASONRY */
-.card:nth-child(odd) { height: 180px; }
-.card:nth-child(even) { height: 260px; }
+.btn-filtro:hover {
+    transform: scale(1.05);
+}
 
-/* IMAGEN */
+
+.card {
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+
 .card img {
-    width: 100%;
-    height: 100%;
+    height: 200px;
     object-fit: cover;
+    border-radius: 10px;
 }
 
-/* TEXTO */
-.card h3 {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    color: white;
-}
 
-/* HOVER */
 .card:hover {
     transform: scale(1.05);
 }
 
-/* OVERLAY */
+
 .card::after {
     content: "Ver más";
     position: absolute;
@@ -74,70 +47,21 @@ input[type="radio"] {
     justify-content: center;
     align-items: center;
     opacity: 0;
+    transition: 0.3s;
 }
 
 .card:hover::after {
     opacity: 1;
 }
 
-/* 🔥 FILTRO REAL */
-#cultural:checked ~ .galeria .card,
-#naturaleza:checked ~ .galeria .card,
-#gastronomico:checked ~ .galeria .card,
-#religioso:checked ~ .galeria .card {
-    display: none;
-}
 
-#cultural:checked ~ .galeria .cultural { display: block; }
-#naturaleza:checked ~ .galeria .naturaleza { display: block; }
-#gastronomico:checked ~ .galeria .gastronomico { display: block; }
-#religioso:checked ~ .galeria .religioso { display: block; }
-
-#todos:checked ~ .galeria .card {
-    display: block;
-}
-
-/* TABLA */
 table {
-    width: 100%;
-    border-collapse: collapse;
     margin-top: 20px;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 10px;
-}
 
-/* RESPONSIVE */
 @media (max-width: 600px) {
-    table {
-        display: block;
-        overflow-x: auto;
-    }
-}
-
-.filtros label {
-    transition: 0.3s;
-}
-
-.filtros label:hover {
-    background: #ddd;
-}
-
-.card {
-    border-radius: 10px;
-}
-
-.card img {
-    border-radius: 10px;
-}
-
-.card::after {
-    transition: 0.3s;
-}
-@media (max-width: 600px) {
-    .galeria {
-        grid-template-columns: 1fr;
+    .card img {
+        height: 180px;
     }
 }
