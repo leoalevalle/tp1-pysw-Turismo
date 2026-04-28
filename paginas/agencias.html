@@ -48,109 +48,119 @@
   </nav>
 </header>
 
-    <main class="main-content">
-        <section class="agencias-container">
-            <h2>Agencias de Viajes en Jujuy</h2>
+<main class="main-content">
+    <section class="container my-5">
+        <h2 class="text-center mb-5 fw-bold">Agencias de Viajes en Jujuy</h2>
 
-                <div class="agencias-grid">
-                    <div class="agencia-card">
-                        <div class="agencia-card-inner">
-
-                            <div class="agencia-card-front">
-                                <img class="agencia-img" src="../archivos/img/agencias/aventura.jpg" alt="Agencia Aventura">
-                                <h3>Aventura Jujuy</h3>
-                                <p>Especialistas en tours de aventura y naturaleza.</p>
-                            </div>
-
-                            <div class="agencia-card-back">
-                                <h4>Aventura Jujuy</h4>
-                                <p>Ofrecemos excursiones a la Puna, Salinas Grandes y más.</p>
-                                <div class="rating">
-                                    <input type="radio" id="star5-1" name="rating-1" value="5"><label for="star5-1">★</label>
-                                    <input type="radio" id="star4-1" name="rating-1" value="4"><label for="star4-1">★</label>
-                                    <input type="radio" id="star3-1" name="rating-1" value="3"><label for="star3-1">★</label>
-                                    <input type="radio" id="star2-1" name="rating-1" value="2"><label for="star2-1">★</label>
-                                    <input type="radio" id="star1-1" name="rating-1" value="1"><label for="star1-1">★</label>
-                                </div>
-                                <button class="btn-contacto">Contactar</button>
-                            </div>
+        <div class="row g-4 justify-content-center">
+            
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="agencia-card">
+                    <div class="agencia-card-inner shadow-sm rounded-4">
+                        <div class="agencia-card-front d-flex flex-column align-items-center justify-content-center p-4 bg-white rounded-4 border">
+                            <img class="img-fluid rounded mb-3" style="height: 120px; object-fit: contain;" src="../archivos/img/agencias/aventura.jpg" alt="Aventura">
+                            <h3 class="h5 fw-bold text-center">Aventura Jujuy</h3>
+                            <p class="text-muted text-center small text-balance">Especialistas en tours de aventura y naturaleza.</p>
+                            <button class="btn btn-outline-primary mt-auto btn-flip w-100">Ver Detalles <i class="bi bi-arrow-right"></i></button>
                         </div>
-                    </div>
-
-                    <div class="agencia-card">
-                        <div class="agencia-card-inner">
-
-                            <div class="agencia-card-front">
-                                <img class="agencia-img" src="../archivos/img/agencias/turistica.jpg" alt="Agencia Turistica">
-                                <h3>Jujuy Tur</h3>
-                                <p>Agencia especializada en turismo de aventura y naturaleza.</p>
+                        <div class="agencia-card-back d-flex flex-column align-items-center text-center p-4 rounded-4">
+                            <h4 class="h5 text-warning mb-2">Aventura Jujuy</h4>
+                            <p class="small text-balance mb-4">Ofrecemos excursiones a la Puna, Salinas Grandes y más.</p>
+                            <h5 class="small text-light mb-2">Calificá esta agencia:</h5>
+                            <div class="rating-stars mb-4 fs-4" data-agencia="aventura">
+                                <i class="bi bi-star star-item" data-value="1"></i>
+                                <i class="bi bi-star star-item" data-value="2"></i>
+                                <i class="bi bi-star star-item" data-value="3"></i>
+                                <i class="bi bi-star star-item" data-value="4"></i>
+                                <i class="bi bi-star star-item" data-value="5"></i>
                             </div>
-
-                            <div class="agencia-card-back">
-                                <h4>Jujuy Tur</h4>
-                                <p>Ofrecemos excursiones a los principales destinos turísticos de la provincia.</p>
-                                <div class="rating">
-                                    <input type="radio" id="star5-2" name="rating-2" value="5"><label for="star5-2">★</label>
-                                    <input type="radio" id="star4-2" name="rating-2" value="4"><label for="star4-2">★</label>
-                                    <input type="radio" id="star3-2" name="rating-2" value="3"><label for="star3-2">★</label>
-                                    <input type="radio" id="star2-2" name="rating-2" value="2"><label for="star2-2">★</label>
-                                    <input type="radio" id="star1-2" name="rating-2" value="1"><label for="star1-2">★</label>
-                                </div>
-                                <button class="btn-contacto">Contactar</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="agencia-card">
-                        <div class="agencia-card-inner">
-
-                            <div class="agencia-card-front">
-                                <img class="agencia-img" src="../archivos/img/agencias/urbano.jpg" alt="Agencia Jujuy Urbano">
-                                <h3>Jujuy Urbano</h3>
-                                <p>Especialistas en tours urbanos y cultura local.</p>
-                            </div>
-
-                            <div class="agencia-card-back">
-                                <h4>Jujuy Urbano</h4>
-                                <p>Ofrecemos excursiones al casco histórico de Jujuy y más.</p>
-                                <div class="rating">
-                                    <input type="radio" id="star5-3" name="rating-3" value="5"><label for="star5-3">★</label>
-                                    <input type="radio" id="star4-3" name="rating-3" value="4"><label for="star4-3">★</label>
-                                    <input type="radio" id="star3-3" name="rating-3" value="3"><label for="star3-3">★</label>
-                                    <input type="radio" id="star2-3" name="rating-3" value="2"><label for="star2-3">★</label>
-                                    <input type="radio" id="star1-3" name="rating-3" value="1"><label for="star1-3">★</label>
-                                </div>
-                                <button class="btn-contacto">Contactar</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="agencia-card">
-                        <div class="agencia-card-inner">
-
-                            <div class="agencia-card-front">
-                                <img class="agencia-img" src="../archivos/img/agencias/noa.jpg" alt="Agencia NOA Turismo">
-                                <h3>NOA Turismo</h3>
-                                <p>Expertos en turismo de la Puna y destinos naturales del norte de la provincia.</p>
-                            </div>
-
-                            <div class="agencia-card-back">
-                                <h4>NOA Turismo</h4>
-                                <p>Ofrecemos excursiones a la Puna, Salinas Grandes y más.</p>
-                                <div class="rating">
-                                    <input type="radio" id="star5-4" name="rating-4" value="5"><label for="star5-4">★</label>
-                                    <input type="radio" id="star4-4" name="rating-4" value="4"><label for="star4-4">★</label>
-                                    <input type="radio" id="star3-4" name="rating-4" value="3"><label for="star3-4">★</label>
-                                    <input type="radio" id="star2-4" name="rating-4" value="2"><label for="star2-4">★</label>
-                                    <input type="radio" id="star1-4" name="rating-4" value="1"><label for="star1-4">★</label>
-                                </div>
-                                <button class="btn-contacto">Contactar</button>
-                            </div>
+                            <button class="btn btn-light mt-auto btn-flip w-100"><i class="bi bi-arrow-left"></i> Volver</button>
                         </div>
                     </div>
                 </div>
-            </section>
-    </main>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="agencia-card">
+                    <div class="agencia-card-inner shadow-sm rounded-4">
+                        <div class="agencia-card-front d-flex flex-column align-items-center justify-content-center p-4 bg-white rounded-4 border">
+                            <img class="img-fluid rounded mb-3" style="height: 120px; object-fit: contain;" src="../archivos/img/agencias/turistica.jpg" alt="Turistica">
+                            <h3 class="h5 fw-bold text-center">Jujuy Tur</h3>
+                            <p class="text-muted text-center small text-balance">Agencia especializada en turismo general.</p>
+                            <button class="btn btn-outline-primary mt-auto btn-flip w-100">Ver Detalles <i class="bi bi-arrow-right"></i></button>
+                        </div>
+                        <div class="agencia-card-back d-flex flex-column align-items-center text-center p-4 rounded-4">
+                            <h4 class="h5 text-warning mb-2">Jujuy Tur</h4>
+                            <p class="small text-balance mb-4">Excursiones a los principales destinos turísticos de la provincia.</p>
+                            <h5 class="small text-light mb-2">Calificá esta agencia:</h5>
+                            <div class="rating-stars mb-4 fs-4" data-agencia="jujuy-tur">
+                                <i class="bi bi-star star-item" data-value="1"></i>
+                                <i class="bi bi-star star-item" data-value="2"></i>
+                                <i class="bi bi-star star-item" data-value="3"></i>
+                                <i class="bi bi-star star-item" data-value="4"></i>
+                                <i class="bi bi-star star-item" data-value="5"></i>
+                            </div>
+                            <button class="btn btn-light mt-auto btn-flip w-100"><i class="bi bi-arrow-left"></i> Volver</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="agencia-card">
+                    <div class="agencia-card-inner shadow-sm rounded-4">
+                        <div class="agencia-card-front d-flex flex-column align-items-center justify-content-center p-4 bg-white rounded-4 border">
+                            <img class="img-fluid rounded mb-3" style="height: 120px; object-fit: contain;" src="../archivos/img/agencias/urbano.jpg" alt="Urbano">
+                            <h3 class="h5 fw-bold text-center">Jujuy Urbano</h3>
+                            <p class="text-muted text-center small text-balance">Especialistas en tours urbanos y cultura local.</p>
+                            <button class="btn btn-outline-primary mt-auto btn-flip w-100">Ver Detalles <i class="bi bi-arrow-right"></i></button>
+                        </div>
+                        <div class="agencia-card-back d-flex flex-column align-items-center text-center p-4 rounded-4">
+                            <h4 class="h5 text-warning mb-2">Jujuy Urbano</h4>
+                            <p class="small text-balance mb-4">Excursiones al casco histórico de Jujuy, museos y gastronomía.</p>
+                            <h5 class="small text-light mb-2">Calificá esta agencia:</h5>
+                            <div class="rating-stars mb-4 fs-4" data-agencia="urbano">
+                                <i class="bi bi-star star-item" data-value="1"></i>
+                                <i class="bi bi-star star-item" data-value="2"></i>
+                                <i class="bi bi-star star-item" data-value="3"></i>
+                                <i class="bi bi-star star-item" data-value="4"></i>
+                                <i class="bi bi-star star-item" data-value="5"></i>
+                            </div>
+                            <button class="btn btn-light mt-auto btn-flip w-100"><i class="bi bi-arrow-left"></i> Volver</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="agencia-card">
+                    <div class="agencia-card-inner shadow-sm rounded-4">
+                        <div class="agencia-card-front d-flex flex-column align-items-center justify-content-center p-4 bg-white rounded-4 border">
+                            <img class="img-fluid rounded mb-3" style="height: 120px; object-fit: contain;" src="../archivos/img/agencias/noa.jpg" alt="NOA">
+                            <h3 class="h5 fw-bold text-center">NOA Turismo</h3>
+                            <p class="text-muted text-center small text-balance">Expertos en destinos naturales del norte de la provincia.</p>
+                            <button class="btn btn-outline-primary mt-auto btn-flip w-100">Ver Detalles <i class="bi bi-arrow-right"></i></button>
+                        </div>
+                        <div class="agencia-card-back d-flex flex-column align-items-center text-center p-4 rounded-4">
+                            <h4 class="h5 text-warning mb-2">NOA Turismo</h4>
+                            <p class="small text-balance mb-4">Ofrecemos viajes exclusivos a la Quebrada de Humahuaca.</p>
+                            <h5 class="small text-light mb-2">Calificá esta agencia:</h5>
+                            <div class="rating-stars mb-4 fs-4" data-agencia="noa-turismo">
+                                <i class="bi bi-star star-item" data-value="1"></i>
+                                <i class="bi bi-star star-item" data-value="2"></i>
+                                <i class="bi bi-star star-item" data-value="3"></i>
+                                <i class="bi bi-star star-item" data-value="4"></i>
+                                <i class="bi bi-star star-item" data-value="5"></i>
+                            </div>
+                            <button class="btn btn-light mt-auto btn-flip w-100"><i class="bi bi-arrow-left"></i> Volver</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</main>
 
 <!--- FOOTER --->
 <footer class="py-5 mt-4">
@@ -217,6 +227,8 @@
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../js/home.js" defer></script>
+<script src="../js/agencias.js" defer></script>
 <script src="../js/index.js" defer></script>
+
 </body>
 </html>
