@@ -5,42 +5,64 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Destinos</title>
+
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Estilos -->
   <link rel="stylesheet" href="../styles/main.css">
   <link rel="stylesheet" href="../styles/destinos.css">
 </head>
+
 <body>
 
-<!-- HEADER -->
+<!-- NAVBAR NUEVO -->
 <header>
   <nav class="navbar navbar-expand-lg fixed-top transition-base shadow-sm">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="../archivos/img/logoJujuy.jpg" alt="Logo Jujuy" width="40" height="40" class="me-2 rounded">
-        <span class="h4 mb-0 fw-bold">Jujuy Viajes</span>
+        <img src="../archivos/img/logoJujuy.jpg" width="40" height="40" class="me-2 rounded">
+        <span class="h4 mb-0 fw-bold">
+          <i class="bi bi-geo-alt-fill me-1"></i> Jujuy Viajes
+        </span>
       </a>
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto align-items-center">
-          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              <i class="bi bi-house-door me-1"></i>Inicio
+            </a>
+          </li>
+
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Destinos</a>
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+              <i class="bi bi-map me-1"></i>Destinos
+            </a>
             <ul class="dropdown-menu shadow border-0">
               <li><a class="dropdown-item" href="destinos.html">Ver Destinos</a></li>
-              <li><a class="dropdown-item" href="blogDestinos.html">Blog de Viajes</a></li>
+              <li><a class="dropdown-item" href="blogDestinos.html">Blog</a></li>
             </ul>
           </li>
+
           <li class="nav-item"><a class="nav-link" href="agencias.html">Agencias</a></li>
           <li class="nav-item"><a class="nav-link" href="precios.html">Precios</a></li>
           <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+
           <li class="nav-item ms-lg-3">
             <button id="btn-theme" class="btn btn-outline-secondary rounded-circle">
               <i id="theme-icon" class="bi bi-moon-fill"></i>
             </button>
           </li>
+
         </ul>
       </div>
     </div>
@@ -48,110 +70,163 @@
 </header>
 
 <!-- MAIN -->
-<main class="contenedor-destinos">
+<main class="container mt-5 pt-5">
 
-<h2>Explorá nuestros destinos</h2>
+  <h2 class="mb-4">Explorá nuestros destinos</h2>
 
-<!--  CONTENEDOR CLAVE -->
-<div class="filtro-container">
+  <!-- FILTROS -->
+  <div class="mb-4">
+    <button class="btn btn-primary btn-filtro" data-filtro="todos">
+      <i class="bi bi-grid"></i> Todos
+    </button>
 
-<!--  INPUTS FUERA -->
-<input type="radio" name="filtro" id="todos" checked>
-<input type="radio" id="cultural" name="filtro">
-<input type="radio" id="naturaleza" name="filtro">
-<input type="radio" id="gastronomico" name="filtro">
-<input type="radio" id="religioso" name="filtro">
+    <button class="btn btn-outline-primary btn-filtro" data-filtro="cultural">
+      <i class="bi bi-bank"></i> Cultural
+    </button>
 
-<!-- FILTROS -->
-<section class="filtros">
-  <label for="todos">Todos</label>
-  <label for="cultural">Cultural</label>
-  <label for="naturaleza">Naturaleza</label>
-  <label for="gastronomico">Gastronómico</label>
-  <label for="religioso">Religioso</label>
-</section>
+    <button class="btn btn-outline-primary btn-filtro" data-filtro="naturaleza">
+      <i class="bi bi-tree"></i> Naturaleza
+    </button>
+
+    <button class="btn btn-outline-primary btn-filtro" data-filtro="gastronomico">
+      <i class="bi bi-cup-hot"></i> Gastronómico
+    </button>
+
+    <button class="btn btn-outline-primary btn-filtro" data-filtro="religioso">
+      <i class="bi bi-stars"></i> Religioso
+    </button>
+  </div>
 
   <!-- GALERIA -->
-  <section class="galeria">
+  <div class="row g-3">
 
-    <div class="card cultural">
-      <img src="../archivos/img/home/quebrada.jpg">
-      <h3>Quebrada de Humahuaca</h3>
+    <div class="col-12 col-md-6 col-lg-4 destino cultural">
+      <div class="card h-100">
+        <img src="../archivos/img/home/quebrada.jpg" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">
+            <i class="bi bi-geo-alt"></i> Quebrada de Humahuaca
+          </h5>
+        </div>
+      </div>
     </div>
 
-    <div class="card naturaleza">
-      <img src="../archivos/img/home/puna.jpg">
-      <h3>Salinas Grandes</h3>
+    <div class="col-12 col-md-6 col-lg-4 destino naturaleza">
+      <div class="card h-100">
+        <img src="../archivos/img/home/puna.jpg" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">
+            <i class="bi bi-geo-alt"></i> Salinas Grandes
+          </h5>
+        </div>
+      </div>
     </div>
 
-    <div class="card naturaleza">
-      <img src="../archivos/img/home/valles.jpg">
-      <h3>Valles</h3>
+    <div class="col-12 col-md-6 col-lg-4 destino naturaleza">
+      <div class="card h-100">
+        <img src="../archivos/img/home/valles.jpg" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">
+            <i class="bi bi-geo-alt"></i> Valles
+          </h5>
+        </div>
+      </div>
     </div>
 
-    <div class="card naturaleza">
-      <img src="../archivos/img/home/yungas.jpg">
-      <h3>Yungas</h3>
+    <div class="col-12 col-md-6 col-lg-4 destino naturaleza">
+      <div class="card h-100">
+        <img src="../archivos/img/home/yungas.jpg" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">
+            <i class="bi bi-geo-alt"></i> Yungas
+          </h5>
+        </div>
+      </div>
     </div>
 
-    <div class="card gastronomico">
-      <img src="../archivos/img/home/Comidas-Tipicas-de-Jujuy-2.jpg">
-      <h3>Gastronomía Jujeña</h3>
+    <div class="col-12 col-md-6 col-lg-4 destino gastronomico">
+      <div class="card h-100">
+        <img src="../archivos/img/home/Comidas-Tipicas-de-Jujuy-2.jpg" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">
+            <i class="bi bi-geo-alt"></i> Gastronomía Jujeña
+          </h5>
+        </div>
+      </div>
     </div>
 
-    <div class="card religioso">
-      <img src="../archivos/img/home/PUNTA-CORRAL-5.jpg">
-      <h3>Punta Corral</h3>
+    <div class="col-12 col-md-6 col-lg-4 destino religioso">
+      <div class="card h-100">
+        <img src="../archivos/img/home/PUNTA-CORRAL-5.jpg" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">
+            <i class="bi bi-geo-alt"></i> Punta Corral
+          </h5>
+        </div>
+      </div>
     </div>
 
+  </div>
+
+  <!-- TABLA -->
+  <section class="mt-5">
+    <h2>Precios estimados</h2>
+
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th><i class="bi bi-geo"></i> Destino</th>
+            <th><i class="bi bi-cash"></i> Precio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Quebrada de Humahuaca</td><td>$85.000</td></tr>
+          <tr><td>Salinas Grandes</td><td>$120.000</td></tr>
+          <tr><td>Valles</td><td>$95.000</td></tr>
+          <tr><td>Yungas</td><td>$95.000</td></tr>
+        </tbody>
+      </table>
+    </div>
   </section>
-
-</div>
-
-<!-- TABLA -->
-<section>
-<h2>Precios estimados</h2>
-<table>
-<tr><th>Destino</th><th>Precio</th></tr>
-<tr><td>Quebrada de Humahuaca</td><td>$85.000</td></tr>
-<tr><td>Salinas Grandes</td><td>$120.000</td></tr>
-<tr><td>Valles</td><td>$95.000</td></tr>
-<tr><td>Yungas</td><td>$95.000</td></tr>
-</table>
-</section>
 
 </main>
 
-<script src="../js/home.js"></script>
-
-<!-- FOOTER -->
-<footer class="py-5">
+<!-- FOOTER NUEVO -->
+<footer class="py-5 mt-4 bg-light text-center">
   <div class="container">
-    <div class="row gy-4 align-items-center">
-      <div class="col-md-6 text-center text-md-start">
-        <h3 class="fw-bold">Suscribite al newsletter</h3>
-        <form class="d-flex gap-2 mt-3 mb-4">
-          <input type="email" class="form-control" placeholder="Tu correo electrónico" required>
-          <button type="submit" class="btn btn-primary">Suscribirse</button>
-        </form>
-        <div class="d-flex gap-3 justify-content-center justify-content-md-start fs-4">
-          <a href="#" class="text-reset"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="text-reset"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="text-reset"><i class="bi bi-tiktok"></i></a>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="ratio ratio-16x9 rounded overflow-hidden shadow">
-          <iframe src="https://www.google.com.ar/maps/d/u/0/embed?mid=1WbCeuLtPgaIoTMBbMBepUsitzrJnUsHE" loading="lazy"></iframe>
-        </div>
-      </div>
-    </div>
+    <h3>Suscribite al newsletter</h3>
+    <form>
+      <input type="email" class="form-control mb-2" placeholder="Tu correo electrónico">
+      <button class="btn btn-primary">Suscribirse</button>
+    </form>
   </div>
 </footer>
 
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../js/home.js" defer></script>
+<!-- SCRIPTS -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- FILTROS -->
+<script>
+$(document).ready(function(){
+
+  $(".btn-filtro").click(function(){
+
+    let filtro = $(this).data("filtro");
+
+    if(filtro === "todos"){
+      $(".destino").show();
+    } else {
+      $(".destino").hide()
+                    .filter("." + filtro)
+                    .show();
+    }
+
+  });
+
+});
+</script>
 
 </body>
 </html>

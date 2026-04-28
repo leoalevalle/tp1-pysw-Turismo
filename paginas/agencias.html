@@ -18,24 +18,25 @@
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="index.html">
         <img src="../archivos/img/logoJujuy.jpg" alt="Logo Jujuy" width="40" height="40" class="me-2 rounded">
-        <span class="h4 mb-0 fw-bold">Jujuy Viajes</span>
+        <span class="h4 mb-0 fw-bold"><i class="bi bi-geo-alt-fill me-1"></i> Jujuy Viajes</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto align-items-center">
-          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door me-1"></i>Inicio</a></li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Destinos</a>
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"><i class="bi bi-map me-1"></i>Destinos</a>
             <ul class="dropdown-menu shadow border-0">
-              <li><a class="dropdown-item" href="destinos.html">Ver Destinos</a></li>
-              <li><a class="dropdown-item" href="blogDestinos.html">Blog de Viajes</a></li>
+              <li><a class="dropdown-item" href="destinos.html"><i class="bi bi-binoculars me-2"></i>Ver Destinos</a></li>
+              <li><a class="dropdown-item" href="blogDestinos.html"><i class="bi bi-journal-bookmark-fill me-2"></i>Blog de Viajes</a></li>
             </ul>
           </li>
-          <li class="nav-item"><a class="nav-link" href="agencias.html">Agencias</a></li>
-          <li class="nav-item"><a class="nav-link" href="precios.html">Precios</a></li>
-          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="agencias.html"><i class="bi bi-building me-1"></i>Agencias</a></li>
+          <li class="nav-item"><a class="nav-link" href="precios.html"><i class="bi bi-tags me-1"></i>Precios</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html"><i class="bi bi-envelope-paper me-1"></i>Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="pishing.html"><i class="bi bi-envelope-paper me-1"></i>Phishing</a></li>
           <li class="nav-item ms-lg-3">
             <button id="btn-theme" class="btn btn-outline-secondary rounded-circle">
               <i id="theme-icon" class="bi bi-moon-fill"></i>
@@ -161,35 +162,73 @@
     </section>
 </main>
 
-<!-- FOOTER -->
-<footer class="py-5">
+<!--- FOOTER --->
+<footer class="py-5 mt-4">
   <div class="container">
     <div class="row gy-4 align-items-center">
       <div class="col-md-6 text-center text-md-start">
-        <h3 class="fw-bold">Suscribite al newsletter</h3>
-        <form class="d-flex gap-2 mt-3 mb-4">
-          <input type="email" class="form-control" placeholder="Tu correo electrónico" required>
-          <button type="submit" class="btn btn-primary">Suscribirse</button>
+        <h3 class="fw-bold"><i class="bi bi-envelope-paper-fill me-2"></i> Suscribite al newsletter</h3>
+        
+        <form id="newsletterForm" class="d-flex flex-column flex-sm-row gap-2 mt-3 mb-4">
+          <div class="flex-grow-1">
+            <input type="email" id="emailInput" class="form-control" 
+                   placeholder="Tu correo electrónico" 
+                   required 
+                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+                   title="Ingresá un email válido (ej: nombre@dominio.com)">
+            <div id="emailFeedback" class="form-text text-danger small mt-1" style="display:none;">
+              <i class="bi bi-exclamation-triangle-fill me-1"></i>Correo inválido
+            </div>
+            <div id="sanitizeMsg" class="form-text text-success small mt-1" style="display:none;">
+              <i class="bi bi-check-circle-fill me-1"></i>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            <i class="bi bi-send-fill me-1"></i> Suscribirse
+          </button>
         </form>
-        <div class="d-flex gap-3 justify-content-center justify-content-md-start fs-4">
-          <a href="#" class="text-reset"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="text-reset"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="text-reset"><i class="bi bi-tiktok"></i></a>
+        
+        <div class="footer-social d-flex gap-3 justify-content-center justify-content-md-start mt-3">
+          <a href="https://facebook.com/jujuyviajes" target="_blank" rel="noopener noreferrer"
+             class="social-link" aria-label="Seguinos en Facebook" title="Facebook">
+            <div class="sprite-icon sprite-facebook"></div>
+          </a>
+          
+          <a href="https://instagram.com/jujuyviajes" target="_blank" rel="noopener noreferrer"
+             class="social-link" aria-label="Seguinos en Instagram" title="Instagram">
+            <div class="sprite-icon sprite-instagram"></div>
+          </a>
+          
+          <a href="https://wa.me/5493884000000" target="_blank" rel="noopener noreferrer"
+             class="social-link" aria-label="Contactanos por WhatsApp" title="WhatsApp">
+            <div class="sprite-icon sprite-whatsapp"></div>
+          </a>
+          
+          <a href="https://youtube.com/@jujuyviajes" target="_blank" rel="noopener noreferrer"
+             class="social-link" aria-label="Suscribite en YouTube" title="YouTube">
+            <div class="sprite-icon sprite-youtube"></div>
+          </a>
         </div>
+        <p class="small text-muted mt-3">
+          <i class="bi bi-image"></i> Iconos unificados en sprite CSS (background-position)
+        </p>
       </div>
       <div class="col-md-6">
         <div class="ratio ratio-16x9 rounded overflow-hidden shadow">
-          <iframe src="https://www.google.com.ar/maps/d/u/0/embed?mid=1WbCeuLtPgaIoTMBbMBepUsitzrJnUsHE" loading="lazy"></iframe>
+          <iframe src="https://www.google.com.ar/maps/d/u/0/embed?mid=1WbCeuLtPgaIoTMBbMBepUsitzrJnUsHE" 
+                  loading="lazy" 
+                  title="Mapa Jujuy"></iframe>
         </div>
       </div>
     </div>
   </div>
 </footer>
 
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../js/home.js" defer></script>
-  <script src="../js/agencias.js" defer></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/home.js" defer></script>
+<script src="../js/agencias.js" defer></script>
+<script src="../js/index.js" defer></script>
 
 </body>
 </html>

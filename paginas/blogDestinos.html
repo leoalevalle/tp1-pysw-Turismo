@@ -18,24 +18,25 @@
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="index.html">
         <img src="../archivos/img/logoJujuy.jpg" alt="Logo Jujuy" width="40" height="40" class="me-2 rounded">
-        <span class="h4 mb-0 fw-bold">Jujuy Viajes</span>
+        <span class="h4 mb-0 fw-bold"><i class="bi bi-geo-alt-fill me-1"></i> Jujuy Viajes</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto align-items-center">
-          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door me-1"></i>Inicio</a></li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Destinos</a>
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"><i class="bi bi-map me-1"></i>Destinos</a>
             <ul class="dropdown-menu shadow border-0">
-              <li><a class="dropdown-item" href="destinos.html">Ver Destinos</a></li>
-              <li><a class="dropdown-item" href="blogDestinos.html">Blog de Viajes</a></li>
+              <li><a class="dropdown-item" href="destinos.html"><i class="bi bi-binoculars me-2"></i>Ver Destinos</a></li>
+              <li><a class="dropdown-item" href="blogDestinos.html"><i class="bi bi-journal-bookmark-fill me-2"></i>Blog de Viajes</a></li>
             </ul>
           </li>
-          <li class="nav-item"><a class="nav-link" href="agencias.html">Agencias</a></li>
-          <li class="nav-item"><a class="nav-link" href="precios.html">Precios</a></li>
-          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="agencias.html"><i class="bi bi-building me-1"></i>Agencias</a></li>
+          <li class="nav-item"><a class="nav-link" href="precios.html"><i class="bi bi-tags me-1"></i>Precios</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html"><i class="bi bi-envelope-paper me-1"></i>Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="pishing.html"><i class="bi bi-envelope-paper me-1"></i>Phishing</a></li>
           <li class="nav-item ms-lg-3">
             <button id="btn-theme" class="btn btn-outline-secondary rounded-circle">
               <i id="theme-icon" class="bi bi-moon-fill"></i>
@@ -47,136 +48,328 @@
   </nav>
 </header>
 
-  <section class="blog-magazine">
-  <input type="radio" name="filtro" id="todos" checked hidden>
-  <input type="radio" name="filtro" id="capital" hidden>
-  <input type="radio" name="filtro" id="interior" hidden>
-  <input type="radio" name="filtro" id="musica" hidden>
+<!-- SECCIÓN BLOG MAGAZINE -->
+<section class="blog-magazine py-5">
+  <div class="container">
+    <!-- Encabezado de la sección -->
+    <div class="text-center mb-5">
+      <span class="badge bg-primary bg-opacity-10 px-3 py-2 rounded-pill mb-3" style="color: var(--text-color);">
+        <i class="bi bi-newspaper me-1"></i> Blog & Novedades
+      </span>
+      <h2 class="fw-bold section-title" style="color: var(--text-color);">Magazine Jujuy Viajes</h2>
+      <p class="fs-5" style="color: var(--text-color); opacity: 0.7;">Enterate de todo lo que pasa en nuestra provincia</p>
+    </div>
 
-  <nav class="categories">
-    <label for="todos">Todos</label>
-    <label for="capital">Jujuy (capital)</label>
-    <label for="interior">Interior</label>
-    <label for="musica">Musica</label>
-  </nav>
-
-  <div class="grid-magazine">
-    <article class="post post-featured cat-interior">
-      <div class="post-img">
-        <img src="../archivos/img/blog/revista1.jpg" alt="Destino">
+    <!-- Filtros por categoría -->
+    <div class="categories-wrapper mb-5">
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <button class="filter-btn active" data-filter="todos">
+          <i class="bi bi-grid-3x3-gap-fill me-2"></i>Todos
+        </button>
+        <button class="filter-btn" data-filter="capital">
+          <i class="bi bi-building me-2"></i>Jujuy (Capital)
+        </button>
+        <button class="filter-btn" data-filter="interior">
+          <i class="bi bi-tree-fill me-2"></i>Interior
+        </button>
+        <button class="filter-btn" data-filter="musica">
+          <i class="bi bi-music-note-beamed me-2"></i>Música
+        </button>
       </div>
-      <div class="post-content">
-        <span class="tag">Interior</span>
-        <h2>Semana Santa – Purmamarca</h2>
-        <p>Semana Santa Purmamarca 2026 Miércoles 1 de abril Purmamarca 10:00 hs.- Programa de Streaming "Purmastream" Jueves 02 de abril Purmamarca 10:00 hs.- Feria Gastronómica "Sabores de Pascua en Purmamarca" en Plaza 9 de Julio 10:30 hs.- Acto Conmemoración a Caídos en Malvinas Cipaqui y Huachichocana 15:30 hs - Via Crusis Purmamarca 20 hs - Misa […]</p>
+    </div>
+
+    <!-- Grid de artículos estilo revista -->
+    <div class="grid-magazine" id="magazineGrid">
+      <!-- Artículo destacado 1 - Interior -->
+      <article class="post post-featured cat-interior" data-category="interior">
+        <div class="post-img position-relative overflow-hidden">
+          <img src="../archivos/img/blog/revista1.jpg" alt="Semana Santa Purmamarca" class="w-100" style="height: 300px; object-fit: cover;">
+          <div class="post-overlay">
+            <i class="bi bi-bookmark-plus-fill"></i>
+          </div>
+        </div>
+        <div class="post-content p-4">
+          <span class="tag mb-2 d-inline-block">
+            <i class="bi bi-geo-alt-fill me-1"></i>Interior
+          </span>
+          <h2 class="h3 fw-bold mb-3" style="color: var(--text-color);">Semana Santa – Purmamarca</h2>
+          <p style="color: var(--text-color); opacity: 0.8;">Semana Santa Purmamarca 2026. Miércoles 1 de abril - Programa de Streaming "Purmastream". Jueves 2 de abril - Feria Gastronómica "Sabores de Pascua" en Plaza 9 de Julio, Acto Conmemoración, Via Crusis y Misa...</p>
+          <div class="post-meta mt-3">
+            <i class="bi bi-calendar3 me-1"></i>
+            <small class="text-muted">1 de abril, 2026</small>
+            <i class="bi bi-chat ms-3 me-1"></i>
+            <small class="text-muted">12 comentarios</small>
+          </div>
+        </div>
+      </article>
+
+      <!-- Artículo 2 - Capital -->
+      <article class="post cat-capital" data-category="capital">
+        <div class="post-img position-relative overflow-hidden">
+          <img src="../archivos/img/blog/revista2.jpg" alt="Muestra de Artes Visuales" class="w-100" style="height: 200px; object-fit: cover;">
+        </div>
+        <div class="post-content p-3">
+          <span class="tag mb-2 d-inline-block">
+            <i class="bi bi-building me-1"></i>Capital
+          </span>
+          <h3 class="h5 fw-bold mb-2" style="color: var(--text-color);">Muestra de Artes Visuales en el Tizón</h3>
+          <p style="color: var(--text-color); opacity: 0.8;">Muestra de Artes Visuales: "Mis Trazos en un Mundo para Todos" - Abril: Mes de...</p>
+          <div class="post-meta mt-2">
+            <i class="bi bi-calendar3 me-1"></i>
+            <small class="text-muted">5 de abril, 2026</small>
+          </div>
+        </div>
+      </article>
+
+      <!-- Artículo 3 - Música -->
+      <article class="post cat-musica" data-category="musica">
+        <div class="post-img position-relative overflow-hidden">
+          <img src="../archivos/img/blog/revista4.jpg" alt="Axel Milanés" class="w-100" style="height: 200px; object-fit: cover;">
+        </div>
+        <div class="post-content p-3">
+          <span class="tag mb-2 d-inline-block">
+            <i class="bi bi-music-note-beamed me-1"></i>Música
+          </span>
+          <h3 class="h5 fw-bold mb-2" style="color: var(--text-color);">Axel Milanés en Concierto</h3>
+          <p style="color: var(--text-color); opacity: 0.8;">Desde Cuba: Axel Milanés en concierto. La canción es la protagonista. Está por...</p>
+          <div class="post-meta mt-2">
+            <i class="bi bi-calendar3 me-1"></i>
+            <small class="text-muted">10 de abril, 2026</small>
+          </div>
+        </div>
+      </article>
+
+      <!-- Artículo 4 - Capital -->
+      <article class="post cat-capital" data-category="capital">
+        <div class="post-img position-relative overflow-hidden">
+          <img src="../archivos/img/blog/revista6.jpeg" alt="Pachamanga Fest" class="w-100" style="height: 200px; object-fit: cover;">
+        </div>
+        <div class="post-content p-3">
+          <span class="tag mb-2 d-inline-block">
+            <i class="bi bi-building me-1"></i>Capital
+          </span>
+          <h3 class="h5 fw-bold mb-2" style="color: var(--text-color);">2° Pachamanga Fest</h3>
+          <p style="color: var(--text-color); opacity: 0.8;">¡Se viene la 2° edición de Pachamanga Fest! Demostraciones de baile, concurso...</p>
+          <div class="post-meta mt-2">
+            <i class="bi bi-calendar3 me-1"></i>
+            <small class="text-muted">15 de abril, 2026</small>
+          </div>
+        </div>
+      </article>
+
+      <!-- Artículo destacado 2 - Interior -->
+      <article class="post post-featured cat-interior" data-category="interior">
+        <div class="post-img position-relative overflow-hidden">
+          <img src="../archivos/img/blog/revista5.jpg" alt="Festi Feria Juella" class="w-100" style="height: 300px; object-fit: cover;">
+          <div class="post-overlay">
+            <i class="bi bi-star-fill"></i>
+          </div>
+        </div>
+        <div class="post-content p-4">
+          <span class="tag mb-2 d-inline-block">
+            <i class="bi bi-geo-alt-fill me-1"></i>Interior
+          </span>
+          <h2 class="h3 fw-bold mb-3" style="color: var(--text-color);">Gran Festi Feria y Trueque – Juella</h2>
+          <p style="color: var(--text-color); opacity: 0.8;">Cronograma de Actividades: 10:00 Hs. Actos protocolares. 11:00 Hs. Apertura de la 4° edición de la festi feria y trueque en Churcal de Juella. Concurso de stands, venta de comidas regionales y campeonato de fútbol...</p>
+          <div class="post-meta mt-3">
+            <i class="bi bi-calendar3 me-1"></i>
+            <small class="text-muted">20 de abril, 2026</small>
+            <i class="bi bi-chat ms-3 me-1"></i>
+            <small class="text-muted">8 comentarios</small>
+          </div>
+        </div>
+      </article>
+
+      <!-- Artículo 6 - Música -->
+      <article class="post cat-musica" data-category="musica">
+        <div class="post-img position-relative overflow-hidden">
+          <img src="../archivos/img/blog/revista3.jpg" alt="Pitín Zalazar" class="w-100" style="height: 200px; object-fit: cover;">
+        </div>
+        <div class="post-content p-3">
+          <span class="tag mb-2 d-inline-block">
+            <i class="bi bi-music-note-beamed me-1"></i>Música
+          </span>
+          <h3 class="h5 fw-bold mb-2" style="color: var(--text-color);">Pitín Zalazar en Vivo</h3>
+          <p style="color: var(--text-color); opacity: 0.8;">Peña El Encuentro presenta show de folclore en vivo de los...</p>
+          <div class="post-meta mt-2">
+            <i class="bi bi-calendar3 me-1"></i>
+            <small class="text-muted">25 de abril, 2026</small>
+          </div>
+        </div>
+      </article>
+
+      <!-- Artículo 7 - Capital -->
+      <article class="post cat-capital" data-category="capital">
+        <div class="post-img position-relative overflow-hidden">
+          <img src="../archivos/img/blog/revista7.jpeg" alt="Fogón Fundación Jujuy" class="w-100" style="height: 200px; object-fit: cover;">
+        </div>
+        <div class="post-content p-3">
+          <span class="tag mb-2 d-inline-block">
+            <i class="bi bi-building me-1"></i>Capital
+          </span>
+          <h3 class="h5 fw-bold mb-2" style="color: var(--text-color);">Gran Fogón Fundación de Jujuy</h3>
+          <p style="color: var(--text-color); opacity: 0.8;">La Federación Gaucha Jujeña tiene el agrado de...</p>
+          <div class="post-meta mt-2">
+            <i class="bi bi-calendar3 me-1"></i>
+            <small class="text-muted">30 de abril, 2026</small>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Sección de Comentarios -->
+    <div class="comments-section mt-5 pt-4">
+      <div class="d-flex align-items-center gap-2 mb-4">
+        <i class="bi bi-chat-dots-fill fs-2" style="color: #ff9531;"></i>
+        <h3 class="fw-bold mb-0" style="color: var(--text-color);">Comentarios del Lector</h3>
       </div>
-    </article>
-
-    <article class="post cat-capital">
-      <img src="../archivos/img/blog/revista2.jpg" alt="Destino">
-      <span class="tag">Capital</span>
-      <h3>Muestra de Artes Visuales en el Tizón</h3>
-      <p>Muestra de Artes Visuales: “Mis Trazos en un Mundo para Todos” Abril: Mes de […]</p>
-    </article>
-
-    <article class="post cat-musica">
-      <img src="../archivos/img/blog/revista4.jpg" alt="Destino">
-      <span class="tag">Musica</span>
-      <h3>Axel Milanés en Concierto</h3>
-      <p>Desde Cuba: Axel Milanés en concierto La canción es la protagonista. Está por […]</p>
-    </article>
-
-    <article class="post cat-capital">
-      <img src="../archivos/img/blog/revista6.jpeg" alt="Destino">
-      <span class="tag">Capital</span>
-      <h3>2° Pachamanga Fest</h3>
-      <p>¡Se viene la 2° edición de Pachamanga Fest! Habrá demostraciones de baile, concurso […]</p>
-    </article>
-
-    <article class="post post-featured cat-interior">
-      <div class="post-img">
-        <img src="../archivos/img/blog/revista5.jpg" alt="Destino">
+      
+      <div class="comments-list mb-4" id="commentsList">
+        <div class="comment d-flex gap-3 mb-4 p-3 rounded-3 transition-base" style="background: rgba(var(--bg-color-rgb), 0.08); backdrop-filter: blur(5px);">
+          <div class="avatar-css flex-shrink-0">
+            <i class="bi bi-person-circle fs-1" style="color: #ff9531;"></i>
+          </div>
+          <div class="comment-body flex-grow-1">
+            <div class="d-flex align-items-center gap-2 mb-1">
+              <strong style="color: var(--text-color);">@viajero_norte</strong>
+              <small class="text-muted"><i class="bi bi-clock me-1"></i>hace 2 días</small>
+            </div>
+            <p style="color: var(--text-color); opacity: 0.9;">Increíble nota. Me recordó a mi último viaje por Purmamarca. ¡Los colores del cerro son únicos!</p>
+            <div class="comment-actions mt-2">
+              <i class="bi bi-heart me-1" style="cursor: pointer;"></i>
+              <small class="text-muted">Responder</small>
+            </div>
+          </div>
+        </div>
+        
+        <div class="comment d-flex gap-3 mb-4 p-3 rounded-3 transition-base" style="background: rgba(var(--bg-color-rgb), 0.08); backdrop-filter: blur(5px);">
+          <div class="avatar-css flex-shrink-0">
+            <i class="bi bi-person-circle fs-1" style="color: #ff9531;"></i>
+          </div>
+          <div class="comment-body flex-grow-1">
+            <div class="d-flex align-items-center gap-2 mb-1">
+              <strong style="color: var(--text-color);">@Mano-de-d10s</strong>
+              <small class="text-muted"><i class="bi bi-clock me-1"></i>hace 5 días</small>
+            </div>
+            <p style="color: var(--text-color); opacity: 0.9;">A Jujuy siempre se vuelve! La Quebrada es magia pura. Excelente artículo.</p>
+            <div class="comment-actions mt-2">
+              <i class="bi bi-heart me-1" style="cursor: pointer;"></i>
+              <small class="text-muted">Responder</small>
+            </div>
+          </div>
+        </div>
+        
+        <div class="comment d-flex gap-3 mb-4 p-3 rounded-3 transition-base" style="background: rgba(var(--bg-color-rgb), 0.08); backdrop-filter: blur(5px);">
+          <div class="avatar-css flex-shrink-0">
+            <i class="bi bi-person-circle fs-1" style="color: #ff9531;"></i>
+          </div>
+          <div class="comment-body flex-grow-1">
+            <div class="d-flex align-items-center gap-2 mb-1">
+              <strong style="color: var(--text-color);">@Soy-Batman</strong>
+              <small class="text-muted"><i class="bi bi-clock me-1"></i>hace 1 semana</small>
+            </div>
+            <p style="color: var(--text-color); opacity: 0.9;">Los mejores paisajes del mundo. Recomiendo las Salinas Grandes al atardecer.</p>
+            <div class="comment-actions mt-2">
+              <i class="bi bi-heart me-1" style="cursor: pointer;"></i>
+              <small class="text-muted">Responder</small>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="post-content">
-        <span class="tag">Interior</span>
-        <h2>Gran Festi Feria y Trueque – Juella</h2>
-        <p>Cronograma de Actividades 10:00 Hs. Actos protocolares. 11:00 Hs. Apertura de la 4 edición de la festi feria y trueque en churcal de Juella. 11:30 Hs. Concurso de stand de productores, artesanos y asadores. 12:00 Hs. Gran venta de comidas regionales y productos de la zona. Por la tardes campeonato de futbol femenino y masculino. […]</p>
+      
+      <!-- Formulario para nuevo comentario -->
+      <div class="comment-form mt-4 p-4 rounded-4" style="background: rgba(var(--bg-color-rgb), 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1);">
+        <h5 class="fw-bold mb-3" style="color: var(--text-color);">
+          <i class="bi bi-pencil-square me-2"></i>Dejá tu comentario
+        </h5>
+        <form id="commentForm">
+          <div class="mb-3">
+            <label class="form-label" style="color: var(--text-color);">
+              <i class="bi bi-person me-1"></i>Usuario
+            </label>
+            <input type="text" id="userName" class="form-control" placeholder="@usuario" required minlength="3" style="background: rgba(var(--bg-color-rgb), 0.1); border: 1px solid rgba(255,255,255,0.2); color: var(--text-color);">
+          </div>
+          <div class="mb-3">
+            <label class="form-label" style="color: var(--text-color);">
+              <i class="bi bi-chat-text me-1"></i>Comentario
+            </label>
+            <textarea id="commentMessage" class="form-control" rows="3" placeholder="Escribí tu comentario..." required minlength="10" style="background: rgba(var(--bg-color-rgb), 0.1); border: 1px solid rgba(255,255,255,0.2); color: var(--text-color);"></textarea>
+            <div class="form-text text-muted">Mínimo 10 caracteres</div>
+          </div>
+          <button type="submit" class="btn btn-primary px-4 rounded-pill">
+            <i class="bi bi-send-fill me-2"></i>Comentar
+          </button>
+        </form>
       </div>
-    </article>
-
-    <article class="post cat-musica">
-      <img src="../archivos/img/blog/revista3.jpg" alt="Destino">
-      <span class="tag">Musica</span>
-      <h3>Pitín Zalazar</h3>
-      <p>Peña El Encuentro presenta show de folclore en vivo de los […]</p>
-    </article>
-
-    <article class="post cat-capital">
-      <img src="../archivos/img/blog/revista7.jpeg" alt="Destino">
-      <span class="tag">Capital</span>
-      <h3>Gran Fogón Fundación de Jujuy</h3>
-      <p>La Federación Gaucha Jujeña tiene el agrado de […]</p>
-    </article>
-
+    </div>
   </div>
-
-  <div class="comments-section">
-    <h3>Comentarios del Lector</h3>
-    <div class="comment">
-      <div class="avatar-css"></div>
-      <div class="comment-body">
-        <strong>@viajero_norte</strong>
-        <p>Increíble nota. Me recordó a mi último viaje por Purmamarca.</p>
-      </div>
-    </div>
-    <div class="comment">
-      <div class="avatar-css"></div>
-      <div class="comment-body">
-        <strong>@Mano-de-d10s</strong>
-        <p>A Jujuy siempre se vuelve !</p>
-      </div>
-    </div>
-    <div class="comment">
-      <div class="avatar-css"></div>
-      <div class="comment-body">
-        <strong>@Soy-Batman</strong>
-        <p>Los mejores paisajes del mundo</p>
-      </div>
-    </div>
-    <form  >
-        <textarea id="mensaje" name="mensaje" required minlength="10"></textarea>
-        <button type="submit" class="button">Comentar</button>
-      </form>
 </section>
 
-<!-- FOOTER -->
-<footer class="py-5">
+<!--- FOOTER --->
+<footer class="py-5 mt-4">
   <div class="container">
     <div class="row gy-4 align-items-center">
       <div class="col-md-6 text-center text-md-start">
-        <h3 class="fw-bold">Suscribite al newsletter</h3>
-        <form class="d-flex gap-2 mt-3 mb-4">
-          <input type="email" class="form-control" placeholder="Tu correo electrónico" required>
-          <button type="submit" class="btn btn-primary">Suscribirse</button>
+        <h3 class="fw-bold"><i class="bi bi-envelope-paper-fill me-2"></i> Suscribite al newsletter</h3>
+        
+        <form id="newsletterForm" class="d-flex flex-column flex-sm-row gap-2 mt-3 mb-4">
+          <div class="flex-grow-1">
+            <input type="email" id="emailInput" class="form-control" 
+                   placeholder="Tu correo electrónico" 
+                   required 
+                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+                   title="Ingresá un email válido (ej: nombre@dominio.com)">
+            <div id="emailFeedback" class="form-text text-danger small mt-1" style="display:none;">
+              <i class="bi bi-exclamation-triangle-fill me-1"></i>Correo inválido
+            </div>
+            <div id="sanitizeMsg" class="form-text text-success small mt-1" style="display:none;">
+              <i class="bi bi-check-circle-fill me-1"></i>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            <i class="bi bi-send-fill me-1"></i> Suscribirse
+          </button>
         </form>
-        <div class="d-flex gap-3 justify-content-center justify-content-md-start fs-4">
-          <a href="#" class="text-reset"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="text-reset"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="text-reset"><i class="bi bi-tiktok"></i></a>
+        
+        <div class="footer-social d-flex gap-3 justify-content-center justify-content-md-start mt-3">
+          <a href="https://facebook.com/jujuyviajes" target="_blank" rel="noopener noreferrer"
+             class="social-link" aria-label="Seguinos en Facebook" title="Facebook">
+            <div class="sprite-icon sprite-facebook"></div>
+          </a>
+          
+          <a href="https://instagram.com/jujuyviajes" target="_blank" rel="noopener noreferrer"
+             class="social-link" aria-label="Seguinos en Instagram" title="Instagram">
+            <div class="sprite-icon sprite-instagram"></div>
+          </a>
+          
+          <a href="https://wa.me/5493884000000" target="_blank" rel="noopener noreferrer"
+             class="social-link" aria-label="Contactanos por WhatsApp" title="WhatsApp">
+            <div class="sprite-icon sprite-whatsapp"></div>
+          </a>
+          
+          <a href="https://youtube.com/@jujuyviajes" target="_blank" rel="noopener noreferrer"
+             class="social-link" aria-label="Suscribite en YouTube" title="YouTube">
+            <div class="sprite-icon sprite-youtube"></div>
+          </a>
         </div>
+        <p class="small text-muted mt-3">
+          <i class="bi bi-image"></i> Iconos unificados en sprite CSS (background-position)
+        </p>
       </div>
       <div class="col-md-6">
         <div class="ratio ratio-16x9 rounded overflow-hidden shadow">
-          <iframe src="https://www.google.com.ar/maps/d/u/0/embed?mid=1WbCeuLtPgaIoTMBbMBepUsitzrJnUsHE" loading="lazy"></iframe>
+          <iframe src="https://www.google.com.ar/maps/d/u/0/embed?mid=1WbCeuLtPgaIoTMBbMBepUsitzrJnUsHE" 
+                  loading="lazy" 
+                  title="Mapa Jujuy"></iframe>
         </div>
       </div>
     </div>
   </div>
 </footer>
 
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../js/home.js" defer></script>
-
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/home.js" defer></script>
+<script src="../js/blog.js" defer></script>
 </body>
 </html>
